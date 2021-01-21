@@ -1,15 +1,15 @@
-# [Go to My blog](https://sominshim.github.io/) - Somin Shim
+# [Blog](https://sominshim.github.io/) - Somin Shim
 
 
 
 ## Contents
 
 1. TAVE research (2021.01 ~)
-* Study Intro to Deep Learning (2021.01 ~)
+  * Study Intro to Deep Learning (2021.01 ~)
 
 2. Project
-* Prediction personality from Social Media Text (2020.10 ~ 2021.01)
-* News Headline generation (2021.01 ~)
+  * Prediction personality from Social Media Text (2020.10 ~ 2021.01)
+  * News Headline generation (2021.01 ~)
 
 
 ### Copyright and License
