@@ -1,0 +1,11 @@
+---
+layout: post
+title: "test"
+subtitle: "first post"
+date: 2021-06-29 16:50:0
+background: '/img/posts/01.jpg'
+---
+
+여기엔 Markdown 문법으로 적으면 된다고 한다.
+나는 블로그를 만들었을 때 시간이 많이 들었지만, 다른 사람들은 이글을 보고 
+조금 더 빨리 만들었으면 좋겠다.
