@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    네이버 웹툰 코테 - Somin Blog
+    
+  </title>
+
+  <meta name="description" content="지원 분야 : Data Analyst">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://sominshim.github.io/2021/07/04/%EB%84%A4%EC%9D%B4%EB%B2%84-%EC%9B%B9%ED%88%B0-%EC%BD%94%ED%85%8C.html">
+  <link rel="alternate" type="application/rss+xml" title="Somin Blog" href="/feed.xml">
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Somin Blog</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/posts/02.jpg')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>네이버 웹툰 코테</h1>
+            
+            <span class="meta">Posted by
+              <a href="#">Somin</a>
+              on July 04, 2021 &middot; <span class="reading-time" title="Estimated read time">
+  
+   3 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p>지원 분야 : Data Analyst</p>
+
+<h2 id="문제-1">문제 1.</h2>
+<ul>
+  <li>문자열 S에 특정 문자열 parttern이 포함돼 있다면 악성코드를 전송하는 패킷으로 분류합니다.</li>
+  <li>악성코드는 pattern을 무작위로 섞은 다음 문자열 S에 숨겨 전송합니다.</li>
+  <li>문자열 pattern을 만들 수 있는 부분 문자열이 포함돼 있다면 악성코드 의심 패킷으로 분류해야 합니다. 부분 문자열은 어떤 문자열의 연속된 일부를 의미합니다.</li>
+</ul>
+
+<p>문자열 S와 pattern이 매개변수로 주어질 때, 문자열 S에서 재배열하여 pattern을 만들 수 있는 부분 문자열은 모두 몇 개인지를 return 하도록 solution 함수를 완성해주세요.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>입출력 예
+solution("tegsornamwaresomran", "ransom") -&gt; 2
+solution("wreawerewa", "ware")            -&gt; 4
+solution("ababababababab", "aabba")       -&gt; 5
+solution("abcde", "edcba")                -&gt; 1
+solution("aabbccddee", "abcde")           -&gt; 6
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from itertools import permutations
+def solution(S, pattern):
+    answer = 0
+    pattern_l = []
+    pat_l = [] 
+
+    for i in range(len(pattern)):
+        pat_l.append(pattern[i])
+    pattern_l = list(map(''.join, permutations(pat_l)))
+
+    for k in range(len(S)):
+        if S[k:k+len(pattern)] in pattern_l:
+            answer += 1       
+        else: continue
+    return answer
+</code></pre></div></div>
+<hr />
+
+<h2 id="문제-2">문제 2.</h2>
+<p>사전에 알파벳 모음 ‘A’, ‘E’, ‘I’, ‘O’, ‘U’만을 사용하여 만들 수 있는, 길이 5 이하의 모든 단어가 수록되어 있습니다. 사전에서 첫 번째 단어는 “A”이고, 그다음은 “AA”이며, 마지막 단어는 “UUUUU”입니다.</p>
+
+<p>단어 하나 word가 매개변수로 주어질 때, 이 단어가 사전에서 몇 번째 단어인지 return 하도록 solution 함수를 완성해주세요.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>제한사항
+- word의 길이는 1이상 5 이하입니다.
+- word는 알파벳 대문자 'A', 'E', 'I', 'O', 'U'로만 이루어져 있습니다.
+</code></pre></div></div>
+
+<hr />
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>입출력 예
+solution("AAAAE") -&gt; 6
+solution("AAAE")  -&gt; 10
+solution("I")     -&gt; 1563
+solution("EIO")   -&gt; 1189 ---
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def solution(word):
+    answer = 0
+
+    for i in range(len(word)):
+        if i == 0:
+            cal = ((6*5+1)*5+1)*5+1
+        elif i == 1:
+            cal = (6*5+1)*5+1
+        elif i == 2:
+            cal = 6*5+1
+        elif i == 3:
+            cal = 6
+        else: cal = 1
+
+        if word[i] == 'A':
+            answer += cal * 0
+        if word[i] == 'E':
+            answer += cal * 1
+        elif word[i] == 'I':
+            answer += cal * 2
+        elif word[i] == 'O':
+            answer += cal * 3
+        elif word[i] == 'U':
+            answer += cal * 4
+
+    return answer + len(word)
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=&gt; 패턴을 찾는데 시간이 오래걸렸다.
+   재귀로 조금 더 간단하게 코드를 짤 수 있을 것 같다.
+</code></pre></div></div>
+
+<hr />
+<h2 id="문제-3">문제 3</h2>
+<p>문자열에서 문자를 k개를 선택해 순서를 유지하며 이어 붙여 사전 순으로 가장 뒤에 오는 문자열을 만들려 합니다.</p>
+
+<p>문자열 letters와 숫자 k가 매개변수로 주어집니다. letters에서 문자를 k개 선택해 순서를 유지하며 이어 붙여 만들 수 있는 문자열 중 사전 순으로 가장 뒤에 오는 것을 return 하도록 solution 함수를 완성해주세요.</p>
+
+<hr />
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>제한사항
+- letters의 길이는 1이상 500,000 이하입니다.
+- letters는 알파벳 소문자로만 이루어져 있습니다.
+- k는 1 이상 letters의 길이 이하인 자연수입니다. ---
+입출력 예
+solution("zbgaj", 3) -&gt; 'zgj' --- ``` def solution(letters, k):
+answer=''
+rsorted = sorted(list(letters), reverse=True)
+for i in range(len(letters)):
+    if letters[i] in rsorted[:k]:
+        answer= answer+letters[i]
+return answer ```
+</code></pre></div></div>
+
+<p>이렇게 하는 게 맞나 싶지만 2시간동안 발버둥쳐봤다.</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/2021/07/03/%EC%BD%94%EB%94%A9%EC%A7%84%EB%A1%9C.html" data-toggle="tooltip" data-placement="top" title="코딩 진로">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/2021/07/06/server.html" data-toggle="tooltip" data-placement="top" title="ssh 서버에서 jupyter notebook 켜기">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:shimsomin20@gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/sominshim">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/somm__in">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Somin 2021</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-XXXXXXXXX-X');
+</script>
+
+
+
+</body>
+
+</html>
