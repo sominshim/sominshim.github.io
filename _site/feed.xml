@@ -1,4 +1,2168 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sominshim.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sominshim.github.io/" rel="alternate" type="text/html" /><updated>2021-07-08T18:41:39+09:00</updated><id>https://sominshim.github.io/feed.xml</id><title type="html">Somin Blog</title><subtitle>programming study record</subtitle><author><name>Somin</name></author><entry><title type="html">주요국의 인공지능과 데이터보호 정책 동향 분석</title><link href="https://sominshim.github.io/2021/07/07/it.html" rel="alternate" type="text/html" title="주요국의 인공지능과 데이터보호 정책 동향 분석" /><published>2021-07-07T22:00:00+09:00</published><updated>2021-07-07T22:00:00+09:00</updated><id>https://sominshim.github.io/2021/07/07/it</id><content type="html" xml:base="https://sominshim.github.io/2021/07/07/it.html">&lt;h2 id=&quot;주요국의-인공지능과-데이터보호-정책-동향-분석---영국과-싱가포르의-가이드를-중심으로&quot;&gt;주요국의 인공지능과 데이터보호 정책 동향 분석 - 영국과 싱가포르의 가이드를 중심으로&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sominshim.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sominshim.github.io/" rel="alternate" type="text/html" /><updated>2021-07-14T22:08:54+09:00</updated><id>https://sominshim.github.io/feed.xml</id><title type="html">Somin Blog</title><subtitle>programming study record</subtitle><author><name>Somin</name></author><entry><title type="html">Eda</title><link href="https://sominshim.github.io/2021/07/09/EDA.html" rel="alternate" type="text/html" title="Eda" /><published>2021-07-09T00:00:00+09:00</published><updated>2021-07-09T00:00:00+09:00</updated><id>https://sominshim.github.io/2021/07/09/EDA</id><content type="html" xml:base="https://sominshim.github.io/2021/07/09/EDA.html">&lt;h2 id=&quot;load-data&quot;&gt;Load data&lt;/h2&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;seaborn&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sns&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data/brazil_activity.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/home/users/s17011720/.conda/envs/jupyter/lib/python3.7/site-packages/IPython/core/interactiveshell.py:3166: DtypeWarning: Columns (1,2,3,40) have mixed types.Specify dtype option on import or set low_memory=False.
+  interactivity=interactivity, compiler=compiler, result=result)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;draw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data/brazil_draw.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;play&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data/brazil_play.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;stage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data/brazil_stage.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tutorial&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data/brazil_tutorial.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;style scoped=&quot;&quot;&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;items&lt;/th&gt;
+      &lt;th&gt;traffic_source_medium&lt;/th&gt;
+      &lt;th&gt;traffic_source_source&lt;/th&gt;
+      &lt;th&gt;traffic_source_name&lt;/th&gt;
+      &lt;th&gt;event_previous_timestamp&lt;/th&gt;
+      &lt;th&gt;ga_session_number&lt;/th&gt;
+      &lt;th&gt;ga_session_number_timestamp&lt;/th&gt;
+      &lt;th&gt;user_level&lt;/th&gt;
+      &lt;th&gt;user_level_timestamp&lt;/th&gt;
+      &lt;th&gt;frist_version&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;activity_name&lt;/th&gt;
+      &lt;th&gt;action_name&lt;/th&gt;
+      &lt;th&gt;activity_id&lt;/th&gt;
+      &lt;th&gt;action_id&lt;/th&gt;
+      &lt;th&gt;firebase_event_origin&lt;/th&gt;
+      &lt;th&gt;ga_session_number_1&lt;/th&gt;
+      &lt;th&gt;sub_name&lt;/th&gt;
+      &lt;th&gt;user_first_touch_timestamp&lt;/th&gt;
+      &lt;th&gt;stream_id&lt;/th&gt;
+      &lt;th&gt;event_timestamp&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619310e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;111&lt;/td&gt;
+      &lt;td&gt;1619310355711000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;firefighter&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310355712000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619311e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;116&lt;/td&gt;
+      &lt;td&gt;1619310716820000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;close_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3002&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310716820000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619538999255000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;doctor&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619538999256000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;110&lt;/td&gt;
+      &lt;td&gt;1619310280808000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;open_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3001&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310280808000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619539036765000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;police&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619539036766000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;5 rows × 88 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(1210979, 88)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;data-cleaning&quot;&gt;Data Cleaning&lt;/h1&gt;
+
+&lt;h2 id=&quot;see-how-many-missing-data-points-we-have&quot;&gt;See how many missing data points we have&lt;/h2&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;missing_values_count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isnull&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;missing_values_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;items                               0
+traffic_source_medium          196002
+traffic_source_source          196002
+traffic_source_name            284690
+event_previous_timestamp       160763
+ga_session_number                 207
+ga_session_number_timestamp       207
+user_level                          0
+user_level_timestamp                0
+frist_version                      28
+dtype: int64
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;데이터-세트의-값-중-몇-퍼센트가-누락되었는지-확인&quot;&gt;데이터 세트의 값 중 몇 퍼센트가 누락되었는지 확인&lt;/h3&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# how many total missing values do we have?
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total_cells&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;total_missing&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;missing_values_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# percent of data that is missing
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total_missing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total_cells&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;18.352279436720206
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;데이터 세트에 있는 셀의 거의 1/5이 비어 있다&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Percentage of NAN Values 
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NAN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;NAN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NAN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;column_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;percentage&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Features with more than 50% of missing values.
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NAN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NAN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NAN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;percentage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;NAN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort_values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;percentage&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ascending&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;style scoped=&quot;&quot;&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;column_name&lt;/th&gt;
+      &lt;th&gt;percentage&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;23&lt;/th&gt;
+      &lt;td&gt;firebase_exp_4&lt;/td&gt;
+      &lt;td&gt;100.000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;24&lt;/th&gt;
+      &lt;td&gt;firebase_exp_4_timestamp&lt;/td&gt;
+      &lt;td&gt;100.000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;39&lt;/th&gt;
+      &lt;td&gt;last_gclid&lt;/td&gt;
+      &lt;td&gt;100.000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;43&lt;/th&gt;
+      &lt;td&gt;_ltv_BRL&lt;/td&gt;
+      &lt;td&gt;99.998018&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;44&lt;/th&gt;
+      &lt;td&gt;_ltv_BRL_timestamp&lt;/td&gt;
+      &lt;td&gt;99.998018&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;41&lt;/th&gt;
+      &lt;td&gt;_ltv_USD&lt;/td&gt;
+      &lt;td&gt;99.982328&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;42&lt;/th&gt;
+      &lt;td&gt;_ltv_USD_timestamp&lt;/td&gt;
+      &lt;td&gt;99.982328&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;40&lt;/th&gt;
+      &lt;td&gt;last_gclid_1&lt;/td&gt;
+      &lt;td&gt;99.619316&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;37&lt;/th&gt;
+      &lt;td&gt;firebase_last_notification&lt;/td&gt;
+      &lt;td&gt;95.956247&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;38&lt;/th&gt;
+      &lt;td&gt;firebase_last_notification_timestamp&lt;/td&gt;
+      &lt;td&gt;95.956247&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;33&lt;/th&gt;
+      &lt;td&gt;firebase_exp_2&lt;/td&gt;
+      &lt;td&gt;87.531328&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;34&lt;/th&gt;
+      &lt;td&gt;firebase_exp_2_timestamp&lt;/td&gt;
+      &lt;td&gt;87.531328&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;35&lt;/th&gt;
+      &lt;td&gt;firebase_exp_3&lt;/td&gt;
+      &lt;td&gt;87.530998&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;36&lt;/th&gt;
+      &lt;td&gt;firebase_exp_3_timestamp&lt;/td&gt;
+      &lt;td&gt;87.530998&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;NAN_cols&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NAN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'column_name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NAN_cols&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---------------------------------------------------------------------------
+
+KeyError                                  Traceback (most recent call last)
+
+&amp;lt;ipython-input-44-0c0c5289f3ec&amp;gt; in &amp;lt;module&amp;gt;
+----&amp;gt; 1 activity = activity.drop([NAN_cols],axis=1)
+
+
+~/.conda/envs/jupyter/lib/python3.7/site-packages/pandas/core/frame.py in drop(self, labels, axis, index, columns, level, inplace, errors)
+   4172             level=level,
+   4173             inplace=inplace,
+-&amp;gt; 4174             errors=errors,
+   4175         )
+   4176 
+
+
+~/.conda/envs/jupyter/lib/python3.7/site-packages/pandas/core/generic.py in drop(self, labels, axis, index, columns, level, inplace, errors)
+   3887         for axis, labels in axes.items():
+   3888             if labels is not None:
+-&amp;gt; 3889                 obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+   3890 
+   3891         if inplace:
+
+
+~/.conda/envs/jupyter/lib/python3.7/site-packages/pandas/core/generic.py in _drop_axis(self, labels, axis, level, errors)
+   3921                 new_axis = axis.drop(labels, level=level, errors=errors)
+   3922             else:
+-&amp;gt; 3923                 new_axis = axis.drop(labels, errors=errors)
+   3924             result = self.reindex(**{axis_name: new_axis})
+   3925 
+
+
+~/.conda/envs/jupyter/lib/python3.7/site-packages/pandas/core/indexes/base.py in drop(self, labels, errors)
+   5285         if mask.any():
+   5286             if errors != &quot;ignore&quot;:
+-&amp;gt; 5287                 raise KeyError(f&quot;{labels[mask]} not found in axis&quot;)
+   5288             indexer = indexer[~mask]
+   5289         return self.delete(indexer)
+
+
+KeyError: &quot;[('firebase_exp_4', 'firebase_exp_4_timestamp', 'firebase_exp_2', 'firebase_exp_2_timestamp', 'firebase_exp_3', 'firebase_exp_3_timestamp', 'firebase_last_notification', 'firebase_last_notification_timestamp', 'last_gclid', 'last_gclid_1', '_ltv_USD', '_ltv_USD_timestamp', '_ltv_BRL', '_ltv_BRL_timestamp')] not found in axis&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;figure-out-why-the-data-is-missing&quot;&gt;Figure out why the data is missing&lt;/h2&gt;
+
+&lt;p&gt;누락된 값을 처리하려면 값이 누락된 이유를 파악하기 위해 직관을 사용해야 합니다. 이것을 알아내는 데 도움이 되도록 스스로에게 물어볼 수 있는 가장 중요한 질문 중 하나는 다음과 같습니다.&lt;/p&gt;
+
+&lt;p&gt;이 값이 기록되지 않았거나 존재하지 않아서 누락된 것입니까?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;값이 존재하지 않아서 누락된 경우, 값이 무엇인지 추측하는 것은 의미가 없기 때문에 NaN 값으로 처리.&lt;/li&gt;
+  &lt;li&gt;값이 기록되지 않아 누락된 경우, 해당 열과 행의 다른 값을 기반으로 했을 수 있는 값을 추측. (imputation)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;drop-missing-values&quot;&gt;Drop missing values&lt;/h3&gt;
+
+&lt;p&gt;급하거나 값이 누락된 이유를 파악할 이유가 없는 경우, 누락된 값이 포함된 행이나 열을 제거할 수 있다. (참고 : 일반적으로 중요한 프로젝트에는 이 접근 방식을 권장하지 않는다. 일반적으로 데이터를 살펴보고 누락된 값이 있는 모든 열을 하나씩 살펴보고 실제로 데이터 세트를 파악하는 데 시간을 할애하는 것이 좋다.)&lt;/p&gt;
+
+&lt;p&gt;누락된 값이 있는 행을 삭제할 경우, dropna().&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dropna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;style scoped=&quot;&quot;&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;items&lt;/th&gt;
+      &lt;th&gt;traffic_source_medium&lt;/th&gt;
+      &lt;th&gt;traffic_source_source&lt;/th&gt;
+      &lt;th&gt;traffic_source_name&lt;/th&gt;
+      &lt;th&gt;event_previous_timestamp&lt;/th&gt;
+      &lt;th&gt;ga_session_number&lt;/th&gt;
+      &lt;th&gt;ga_session_number_timestamp&lt;/th&gt;
+      &lt;th&gt;user_level&lt;/th&gt;
+      &lt;th&gt;user_level_timestamp&lt;/th&gt;
+      &lt;th&gt;frist_version&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;activity_name&lt;/th&gt;
+      &lt;th&gt;action_name&lt;/th&gt;
+      &lt;th&gt;activity_id&lt;/th&gt;
+      &lt;th&gt;action_id&lt;/th&gt;
+      &lt;th&gt;firebase_event_origin&lt;/th&gt;
+      &lt;th&gt;ga_session_number_1&lt;/th&gt;
+      &lt;th&gt;sub_name&lt;/th&gt;
+      &lt;th&gt;user_first_touch_timestamp&lt;/th&gt;
+      &lt;th&gt;stream_id&lt;/th&gt;
+      &lt;th&gt;event_timestamp&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;0 rows × 88 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;모든 데이터가 제거되었다. 이는 데이터 세트의 모든 행에 하나 이상의 결측값이 있기 때문이다. 대신 하나 이상의 결측값이 있는 모든 열을 제거하는 것이 더 나을 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;columns_with_na_dropped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dropna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;columns_with_na_dropped&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;style scoped=&quot;&quot;&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;items&lt;/th&gt;
+      &lt;th&gt;user_level&lt;/th&gt;
+      &lt;th&gt;user_level_timestamp&lt;/th&gt;
+      &lt;th&gt;user_pseudo_id&lt;/th&gt;
+      &lt;th&gt;event_bundle_sequence_id&lt;/th&gt;
+      &lt;th&gt;platform&lt;/th&gt;
+      &lt;th&gt;event_server_timestamp_offset&lt;/th&gt;
+      &lt;th&gt;app_info_install_source&lt;/th&gt;
+      &lt;th&gt;app_info_firebase_app_id&lt;/th&gt;
+      &lt;th&gt;app_info_version&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;geo_continent&lt;/th&gt;
+      &lt;th&gt;sub_id&lt;/th&gt;
+      &lt;th&gt;activity_name&lt;/th&gt;
+      &lt;th&gt;action_name&lt;/th&gt;
+      &lt;th&gt;activity_id&lt;/th&gt;
+      &lt;th&gt;action_id&lt;/th&gt;
+      &lt;th&gt;firebase_event_origin&lt;/th&gt;
+      &lt;th&gt;sub_name&lt;/th&gt;
+      &lt;th&gt;stream_id&lt;/th&gt;
+      &lt;th&gt;event_timestamp&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;111&lt;/td&gt;
+      &lt;td&gt;1619310355711000&lt;/td&gt;
+      &lt;td&gt;8da97c0b43305c41d78cc0f5585d6b9a&lt;/td&gt;
+      &lt;td&gt;1572&lt;/td&gt;
+      &lt;td&gt;ANDROID&lt;/td&gt;
+      &lt;td&gt;1651059&lt;/td&gt;
+      &lt;td&gt;com.android.vending&lt;/td&gt;
+      &lt;td&gt;1:142569243604:android:31c6a5c81e681fd8210c41&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;Americas&lt;/td&gt;
+      &lt;td&gt;1008&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;firefighter&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310355712000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;116&lt;/td&gt;
+      &lt;td&gt;1619310716820000&lt;/td&gt;
+      &lt;td&gt;8da97c0b43305c41d78cc0f5585d6b9a&lt;/td&gt;
+      &lt;td&gt;1647&lt;/td&gt;
+      &lt;td&gt;ANDROID&lt;/td&gt;
+      &lt;td&gt;1681114&lt;/td&gt;
+      &lt;td&gt;com.android.vending&lt;/td&gt;
+      &lt;td&gt;1:142569243604:android:31c6a5c81e681fd8210c41&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;Americas&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;close_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3002&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310716820000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619538999255000&lt;/td&gt;
+      &lt;td&gt;8da97c0b43305c41d78cc0f5585d6b9a&lt;/td&gt;
+      &lt;td&gt;2047&lt;/td&gt;
+      &lt;td&gt;ANDROID&lt;/td&gt;
+      &lt;td&gt;1436640&lt;/td&gt;
+      &lt;td&gt;com.android.vending&lt;/td&gt;
+      &lt;td&gt;1:142569243604:android:31c6a5c81e681fd8210c41&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;Americas&lt;/td&gt;
+      &lt;td&gt;1005&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;doctor&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619538999256000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;110&lt;/td&gt;
+      &lt;td&gt;1619310280808000&lt;/td&gt;
+      &lt;td&gt;8da97c0b43305c41d78cc0f5585d6b9a&lt;/td&gt;
+      &lt;td&gt;1554&lt;/td&gt;
+      &lt;td&gt;ANDROID&lt;/td&gt;
+      &lt;td&gt;1643764&lt;/td&gt;
+      &lt;td&gt;com.android.vending&lt;/td&gt;
+      &lt;td&gt;1:142569243604:android:31c6a5c81e681fd8210c41&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;Americas&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;open_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3001&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310280808000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619539036765000&lt;/td&gt;
+      &lt;td&gt;8da97c0b43305c41d78cc0f5585d6b9a&lt;/td&gt;
+      &lt;td&gt;2068&lt;/td&gt;
+      &lt;td&gt;ANDROID&lt;/td&gt;
+      &lt;td&gt;1425169&lt;/td&gt;
+      &lt;td&gt;com.android.vending&lt;/td&gt;
+      &lt;td&gt;1:142569243604:android:31c6a5c81e681fd8210c41&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;Americas&lt;/td&gt;
+      &lt;td&gt;1007&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;police&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619539036766000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;5 rows × 33 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Columns in original dataset: %d &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Columns with na's dropped: %d&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;columns_with_na_dropped&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Columns in original dataset: 88 
+
+Columns with na's dropped: 33
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;columns_with_na_dropped&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Index(['items', 'user_level', 'user_level_timestamp', 'user_pseudo_id',
+       'event_bundle_sequence_id', 'platform', 'event_server_timestamp_offset',
+       'app_info_install_source', 'app_info_firebase_app_id',
+       'app_info_version', 'app_info_id', 'event_date', 'event_name',
+       'device_time_zone_offset_seconds', 'device_operating_system',
+       'device_mobile_os_hardware_model', 'device_is_limited_ad_tracking',
+       'device_operating_system_version', 'device_language', 'device_category',
+       'geo_metro', 'geo_sub_continent', 'geo_country', 'geo_continent',
+       'sub_id', 'activity_name', 'action_name', 'activity_id', 'action_id',
+       'firebase_event_origin', 'sub_name', 'stream_id', 'event_timestamp'],
+      dtype='object')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 전체가 결측값인 행 또는 열만 삭제
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dropna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;how&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'all'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;style scoped=&quot;&quot;&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;items&lt;/th&gt;
+      &lt;th&gt;traffic_source_medium&lt;/th&gt;
+      &lt;th&gt;traffic_source_source&lt;/th&gt;
+      &lt;th&gt;traffic_source_name&lt;/th&gt;
+      &lt;th&gt;event_previous_timestamp&lt;/th&gt;
+      &lt;th&gt;ga_session_number&lt;/th&gt;
+      &lt;th&gt;ga_session_number_timestamp&lt;/th&gt;
+      &lt;th&gt;user_level&lt;/th&gt;
+      &lt;th&gt;user_level_timestamp&lt;/th&gt;
+      &lt;th&gt;frist_version&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;activity_name&lt;/th&gt;
+      &lt;th&gt;action_name&lt;/th&gt;
+      &lt;th&gt;activity_id&lt;/th&gt;
+      &lt;th&gt;action_id&lt;/th&gt;
+      &lt;th&gt;firebase_event_origin&lt;/th&gt;
+      &lt;th&gt;ga_session_number_1&lt;/th&gt;
+      &lt;th&gt;sub_name&lt;/th&gt;
+      &lt;th&gt;user_first_touch_timestamp&lt;/th&gt;
+      &lt;th&gt;stream_id&lt;/th&gt;
+      &lt;th&gt;event_timestamp&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619310e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;111&lt;/td&gt;
+      &lt;td&gt;1619310355711000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;firefighter&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310355712000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619311e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;116&lt;/td&gt;
+      &lt;td&gt;1619310716820000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;close_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3002&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310716820000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619538999255000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;doctor&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619538999256000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;110&lt;/td&gt;
+      &lt;td&gt;1619310280808000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;open_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3001&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310280808000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619539036765000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;police&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619539036766000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210974&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619539024856000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;basic&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619539024856000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210975&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;107&lt;/td&gt;
+      &lt;td&gt;1619308894406000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;worker&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619308894406000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210976&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;1619550368873000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;basic&lt;/td&gt;
+      &lt;td&gt;1.619197e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619550368873000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210977&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;1619550361714000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;pringles&lt;/td&gt;
+      &lt;td&gt;1.619197e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619550361715000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210978&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;1619550449656000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;open_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3001&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.619197e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619550449656000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;1210979 rows × 85 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dropna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;how&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'all'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;style scoped=&quot;&quot;&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;items&lt;/th&gt;
+      &lt;th&gt;traffic_source_medium&lt;/th&gt;
+      &lt;th&gt;traffic_source_source&lt;/th&gt;
+      &lt;th&gt;traffic_source_name&lt;/th&gt;
+      &lt;th&gt;event_previous_timestamp&lt;/th&gt;
+      &lt;th&gt;ga_session_number&lt;/th&gt;
+      &lt;th&gt;ga_session_number_timestamp&lt;/th&gt;
+      &lt;th&gt;user_level&lt;/th&gt;
+      &lt;th&gt;user_level_timestamp&lt;/th&gt;
+      &lt;th&gt;frist_version&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;activity_name&lt;/th&gt;
+      &lt;th&gt;action_name&lt;/th&gt;
+      &lt;th&gt;activity_id&lt;/th&gt;
+      &lt;th&gt;action_id&lt;/th&gt;
+      &lt;th&gt;firebase_event_origin&lt;/th&gt;
+      &lt;th&gt;ga_session_number_1&lt;/th&gt;
+      &lt;th&gt;sub_name&lt;/th&gt;
+      &lt;th&gt;user_first_touch_timestamp&lt;/th&gt;
+      &lt;th&gt;stream_id&lt;/th&gt;
+      &lt;th&gt;event_timestamp&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619310e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;111&lt;/td&gt;
+      &lt;td&gt;1619310355711000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;firefighter&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310355712000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619311e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;116&lt;/td&gt;
+      &lt;td&gt;1619310716820000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;close_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3002&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310716820000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619538999255000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;doctor&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619538999256000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;110&lt;/td&gt;
+      &lt;td&gt;1619310280808000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;open_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3001&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310280808000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619539036765000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;police&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619539036766000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210974&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619539024856000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;basic&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619539024856000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210975&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;107&lt;/td&gt;
+      &lt;td&gt;1619308894406000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;worker&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619308894406000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210976&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;1619550368873000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;basic&lt;/td&gt;
+      &lt;td&gt;1.619197e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619550368873000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210977&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;1619550361714000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;pringles&lt;/td&gt;
+      &lt;td&gt;1.619197e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619550361715000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210978&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;1619550449656000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;open_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3001&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.619197e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619550449656000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;1210979 rows × 88 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;thresh : optional 변수로 not-nan data 즉 value 값이 존재하는 nan이 아닌 데이터가 몇 개면 삭제하지 않을 것인지를 정하는 변수이다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 임계치 설정해서 제거하기
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dropna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;thresh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;style scoped=&quot;&quot;&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;items&lt;/th&gt;
+      &lt;th&gt;traffic_source_medium&lt;/th&gt;
+      &lt;th&gt;traffic_source_source&lt;/th&gt;
+      &lt;th&gt;traffic_source_name&lt;/th&gt;
+      &lt;th&gt;event_previous_timestamp&lt;/th&gt;
+      &lt;th&gt;ga_session_number&lt;/th&gt;
+      &lt;th&gt;ga_session_number_timestamp&lt;/th&gt;
+      &lt;th&gt;user_level&lt;/th&gt;
+      &lt;th&gt;user_level_timestamp&lt;/th&gt;
+      &lt;th&gt;frist_version&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;activity_name&lt;/th&gt;
+      &lt;th&gt;action_name&lt;/th&gt;
+      &lt;th&gt;activity_id&lt;/th&gt;
+      &lt;th&gt;action_id&lt;/th&gt;
+      &lt;th&gt;firebase_event_origin&lt;/th&gt;
+      &lt;th&gt;ga_session_number_1&lt;/th&gt;
+      &lt;th&gt;sub_name&lt;/th&gt;
+      &lt;th&gt;user_first_touch_timestamp&lt;/th&gt;
+      &lt;th&gt;stream_id&lt;/th&gt;
+      &lt;th&gt;event_timestamp&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619310e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;111&lt;/td&gt;
+      &lt;td&gt;1619310355711000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;firefighter&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310355712000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619311e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;116&lt;/td&gt;
+      &lt;td&gt;1619310716820000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;close_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3002&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310716820000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619538999255000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;doctor&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619538999256000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;110&lt;/td&gt;
+      &lt;td&gt;1619310280808000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;open_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3001&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310280808000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619539036765000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;police&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619539036766000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210974&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619539024856000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;basic&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619539024856000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210975&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;107&lt;/td&gt;
+      &lt;td&gt;1619308894406000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;worker&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619308894406000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210976&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;1619550368873000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;basic&lt;/td&gt;
+      &lt;td&gt;1.619197e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619550368873000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210977&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;1619550361714000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;pringles&lt;/td&gt;
+      &lt;td&gt;1.619197e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619550361715000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210978&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;1619550449656000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;open_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3001&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.619197e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619550449656000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;1210979 rows × 85 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 특정 컬럼 내의 결측치만 삭제하려고 할 때
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dropna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'items'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'ga_session_number'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;style scoped=&quot;&quot;&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;items&lt;/th&gt;
+      &lt;th&gt;traffic_source_medium&lt;/th&gt;
+      &lt;th&gt;traffic_source_source&lt;/th&gt;
+      &lt;th&gt;traffic_source_name&lt;/th&gt;
+      &lt;th&gt;event_previous_timestamp&lt;/th&gt;
+      &lt;th&gt;ga_session_number&lt;/th&gt;
+      &lt;th&gt;ga_session_number_timestamp&lt;/th&gt;
+      &lt;th&gt;user_level&lt;/th&gt;
+      &lt;th&gt;user_level_timestamp&lt;/th&gt;
+      &lt;th&gt;frist_version&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;activity_name&lt;/th&gt;
+      &lt;th&gt;action_name&lt;/th&gt;
+      &lt;th&gt;activity_id&lt;/th&gt;
+      &lt;th&gt;action_id&lt;/th&gt;
+      &lt;th&gt;firebase_event_origin&lt;/th&gt;
+      &lt;th&gt;ga_session_number_1&lt;/th&gt;
+      &lt;th&gt;sub_name&lt;/th&gt;
+      &lt;th&gt;user_first_touch_timestamp&lt;/th&gt;
+      &lt;th&gt;stream_id&lt;/th&gt;
+      &lt;th&gt;event_timestamp&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619310e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;111&lt;/td&gt;
+      &lt;td&gt;1619310355711000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;firefighter&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310355712000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619311e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;116&lt;/td&gt;
+      &lt;td&gt;1619310716820000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;close_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3002&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310716820000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619538999255000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;doctor&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619538999256000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;110&lt;/td&gt;
+      &lt;td&gt;1619310280808000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;open_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3001&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310280808000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5.63939e+18&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619539036765000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;police&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619539036766000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210974&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619539024856000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;basic&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619539024856000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210975&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;107&lt;/td&gt;
+      &lt;td&gt;1619308894406000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;worker&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619308894406000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210976&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;1619550368873000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;basic&lt;/td&gt;
+      &lt;td&gt;1.619197e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619550368873000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210977&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;1619550361714000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;click_skin&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;pringles&lt;/td&gt;
+      &lt;td&gt;1.619197e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619550361715000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1210978&lt;/th&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;notification&lt;/td&gt;
+      &lt;td&gt;Firebase&lt;/td&gt;
+      &lt;td&gt;5639386036271637485&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;1.619550e+15&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;1619550449656000&lt;/td&gt;
+      &lt;td&gt;1.5.2&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;content_button&lt;/td&gt;
+      &lt;td&gt;open_collection&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3001&lt;/td&gt;
+      &lt;td&gt;app&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.619197e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619550449656000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;1210772 rows × 88 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;filling-in-missing-values-automatically&quot;&gt;Filling in missing values automatically&lt;/h3&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;handling-missing-data&quot;&gt;Handling missing data&lt;/h2&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;handling_missing_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# 데이터 세트의 값 중 몇 퍼센트가 누락되었는지 확인
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;how many total missing values do we have?&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;total_cells&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;total_missing&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;missing_values_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;round&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total_missing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total_cells&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;%&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;#
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;columns_with_na_dropped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dropna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;columns_with_na_dropped&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;scaling-and-normalization&quot;&gt;Scaling and normalization&lt;/h2&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;mlxtend.preprocessing&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minmax_scaling&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;seaborn&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sns&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# set seed for reproducibility
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;cat_cols&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select_dtypes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'int64'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'float64'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cat_cols&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Index(['items', 'traffic_source_medium', 'traffic_source_source',
+       'traffic_source_name', 'frist_version', 'cuid', 'ad_id', 'last_gclid_1',
+       'user_pseudo_id', 'platform', 'app_info_install_source',
+       'app_info_firebase_app_id', 'app_info_version', 'app_info_id',
+       'event_name', 'device_operating_system',
+       'device_mobile_os_hardware_model', 'device_mobile_marketing_name',
+       'device_is_limited_ad_tracking', 'device_advertising_id',
+       'device_operating_system_version', 'device_mobile_model_name',
+       'device_language', 'device_mobile_brand_name', 'device_category',
+       'geo_metro', 'geo_sub_continent', 'geo_city', 'geo_region',
+       'geo_country', 'geo_continent', 'ad_id_1', 'firebase_screen_class',
+       'activity_name', 'action_name', 'firebase_event_origin', 'sub_name'],
+      dtype='object')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cat_cols&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;37
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;num_colms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_get_numeric_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;num_colms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;style scoped=&quot;&quot;&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;event_previous_timestamp&lt;/th&gt;
+      &lt;th&gt;ga_session_number&lt;/th&gt;
+      &lt;th&gt;ga_session_number_timestamp&lt;/th&gt;
+      &lt;th&gt;user_level&lt;/th&gt;
+      &lt;th&gt;user_level_timestamp&lt;/th&gt;
+      &lt;th&gt;frist_version_timestamp&lt;/th&gt;
+      &lt;th&gt;cuid_timestamp&lt;/th&gt;
+      &lt;th&gt;firebase_exp_8&lt;/th&gt;
+      &lt;th&gt;firebase_exp_8_timestamp&lt;/th&gt;
+      &lt;th&gt;firebase_exp_10&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;ga_session_id_1&lt;/th&gt;
+      &lt;th&gt;firebase_screen_id&lt;/th&gt;
+      &lt;th&gt;sub_id&lt;/th&gt;
+      &lt;th&gt;engaged_session_event&lt;/th&gt;
+      &lt;th&gt;activity_id&lt;/th&gt;
+      &lt;th&gt;action_id&lt;/th&gt;
+      &lt;th&gt;ga_session_number_1&lt;/th&gt;
+      &lt;th&gt;user_first_touch_timestamp&lt;/th&gt;
+      &lt;th&gt;stream_id&lt;/th&gt;
+      &lt;th&gt;event_timestamp&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;1.619310e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;111&lt;/td&gt;
+      &lt;td&gt;1619310355711000&lt;/td&gt;
+      &lt;td&gt;1.619310e+15&lt;/td&gt;
+      &lt;td&gt;1.619310e+15&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;1.619309e+09&lt;/td&gt;
+      &lt;td&gt;-8.255892e+18&lt;/td&gt;
+      &lt;td&gt;1008&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310355712000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;1.619311e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;116&lt;/td&gt;
+      &lt;td&gt;1619310716820000&lt;/td&gt;
+      &lt;td&gt;1.619310e+15&lt;/td&gt;
+      &lt;td&gt;1.619310e+15&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;1.619309e+09&lt;/td&gt;
+      &lt;td&gt;-8.255892e+18&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3002&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310716820000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619538999255000&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;1.619539e+09&lt;/td&gt;
+      &lt;td&gt;2.995595e+18&lt;/td&gt;
+      &lt;td&gt;1005&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619538999256000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619309e+15&lt;/td&gt;
+      &lt;td&gt;110&lt;/td&gt;
+      &lt;td&gt;1619310280808000&lt;/td&gt;
+      &lt;td&gt;1.619310e+15&lt;/td&gt;
+      &lt;td&gt;1.619310e+15&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;1.619309e+09&lt;/td&gt;
+      &lt;td&gt;-8.255892e+18&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3001&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619310280808000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;1619539036765000&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;1.619539e+15&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;1.619539e+09&lt;/td&gt;
+      &lt;td&gt;2.995595e+18&lt;/td&gt;
+      &lt;td&gt;1007&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3003&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;1.619195e+15&lt;/td&gt;
+      &lt;td&gt;2205916636&lt;/td&gt;
+      &lt;td&gt;1619539036766000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;5 rows × 52 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nunique&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;items                               1
+traffic_source_medium               5
+traffic_source_source               5
+traffic_source_name                 7
+event_previous_timestamp      1042383
+                               ...   
+ga_session_number_1                44
+sub_name                           10
+user_first_touch_timestamp     160848
+stream_id                           1
+event_timestamp               1202693
+Length: 88, dtype: int64
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop_duplicates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Somin</name></author><summary type="html"></summary></entry><entry><title type="html">주요국의 인공지능과 데이터보호 정책 동향 분석</title><link href="https://sominshim.github.io/2021/07/07/%EC%A3%BC%EC%9A%94%EA%B5%AD%EC%9D%98-%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EA%B3%BC-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B3%B4%ED%98%B8-%EC%A0%95%EC%B1%85-%EB%8F%99%ED%96%A5-%EB%B6%84%EC%84%9D.html" rel="alternate" type="text/html" title="주요국의 인공지능과 데이터보호 정책 동향 분석" /><published>2021-07-07T22:00:00+09:00</published><updated>2021-07-07T22:00:00+09:00</updated><id>https://sominshim.github.io/2021/07/07/%EC%A3%BC%EC%9A%94%EA%B5%AD%EC%9D%98%20%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EA%B3%BC%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B3%B4%ED%98%B8%20%EC%A0%95%EC%B1%85%20%EB%8F%99%ED%96%A5%20%EB%B6%84%EC%84%9D</id><content type="html" xml:base="https://sominshim.github.io/2021/07/07/%EC%A3%BC%EC%9A%94%EA%B5%AD%EC%9D%98-%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EA%B3%BC-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B3%B4%ED%98%B8-%EC%A0%95%EC%B1%85-%EB%8F%99%ED%96%A5-%EB%B6%84%EC%84%9D.html">&lt;h2 id=&quot;주요국의-인공지능과-데이터보호-정책-동향-분석---영국과-싱가포르의-가이드를-중심으로&quot;&gt;주요국의 인공지능과 데이터보호 정책 동향 분석 - 영국과 싱가포르의 가이드를 중심으로&lt;/h2&gt;
 
 &lt;h3 id=&quot;i-서론&quot;&gt;I. 서론&lt;/h3&gt;
 &lt;p&gt;인공지능 기술 도입에 따라 부상한 프라이버시 침해, 공정성, 투명성, 책임성 등의 각종 윤리적 이슈 등을 해결하기 위해 주요국 정부와 기업들이 나서고 있다. 윤리적 이슈는 말 그대로 법으로 규율하기 어려운 도덕과 윤리의 영역인 경우가 대부분이므로 각 국의 정부정책은 자율적인 이행을 촉진하며 우수사례 등을 제시하고 권고하는 원칙이나 지침, 가이드라인의 형식을 띠고 있다.&lt;/p&gt;
@@ -475,128 +2639,4 @@ Random Forest의 최적 하이퍼 파라미터 값을 찾아 최고의 정확도
 &lt;center&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;/img/posts/210701Figure4.png&quot; alt=&quot;Demo Image&quot; width=&quot;300&quot; height=&quot;300&quot; /&gt;&lt;/center&gt;
 &lt;p&gt;&lt;span class=&quot;caption text-muted&quot;&gt;Table 6 Resulted precision, recall, and f1-score for each customer class of best model&lt;/span&gt;&lt;/p&gt;</content><author><name>Somin</name></author><summary type="html">[2020] Predicting Customer Class using Customer Lifetime Value with Random Forest Algorithm</summary></entry><entry><title type="html">test</title><link href="https://sominshim.github.io/2021/06/29/test.html" rel="alternate" type="text/html" title="test" /><published>2021-06-29T16:50:00+09:00</published><updated>2021-06-29T16:50:00+09:00</updated><id>https://sominshim.github.io/2021/06/29/test</id><content type="html" xml:base="https://sominshim.github.io/2021/06/29/test.html">&lt;p&gt;여기엔 Markdown 문법으로 적으면 된다고 한다.
 나는 블로그를 만들었을 때 시간이 많이 들었지만, 다른 사람들은 이글을 보고 
-조금 더 빨리 만들었으면 좋겠다.&lt;/p&gt;</content><author><name>Somin</name></author><summary type="html">여기엔 Markdown 문법으로 적으면 된다고 한다. 나는 블로그를 만들었을 때 시간이 많이 들었지만, 다른 사람들은 이글을 보고 조금 더 빨리 만들었으면 좋겠다.</summary></entry><entry><title type="html">Man must explore, and this is exploration at its greatest</title><link href="https://sominshim.github.io/2020/01/31/man-must-explore.html" rel="alternate" type="text/html" title="Man must explore, and this is exploration at its greatest" /><published>2020-01-31T23:45:13+09:00</published><updated>2020-01-31T23:45:13+09:00</updated><id>https://sominshim.github.io/2020/01/31/man-must-explore</id><content type="html" xml:base="https://sominshim.github.io/2020/01/31/man-must-explore.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
-
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
-
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
-
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
-
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote class=&quot;blockquote&quot;&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;img class=&quot;img-fluid&quot; src=&quot;https://source.unsplash.com/Mn9Fa_wQH-M/800x450&quot; alt=&quot;Demo Image&quot;&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Somin</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">I believe every human has a finite number of heartbeats. I don’t intend to waste any of mine.</title><link href="https://sominshim.github.io/2020/01/31/heartbeats.html" rel="alternate" type="text/html" title="I believe every human has a finite number of heartbeats. I don’t intend to waste any of mine." /><published>2020-01-31T12:45:13+09:00</published><updated>2020-01-31T12:45:13+09:00</updated><id>https://sominshim.github.io/2020/01/31/heartbeats</id><content type="html" xml:base="https://sominshim.github.io/2020/01/31/heartbeats.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
-
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
-
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
-
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
-
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote class=&quot;blockquote&quot;&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;img class=&quot;img-fluid&quot; src=&quot;https://source.unsplash.com/Mn9Fa_wQH-M/800x450&quot; alt=&quot;Demo Image&quot;&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Somin</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">Science has not yet mastered prophecy</title><link href="https://sominshim.github.io/2020/01/30/prophecy.html" rel="alternate" type="text/html" title="Science has not yet mastered prophecy" /><published>2020-01-30T12:45:13+09:00</published><updated>2020-01-30T12:45:13+09:00</updated><id>https://sominshim.github.io/2020/01/30/prophecy</id><content type="html" xml:base="https://sominshim.github.io/2020/01/30/prophecy.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
-
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
-
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
-
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
-
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote class=&quot;blockquote&quot;&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;img class=&quot;img-fluid&quot; src=&quot;https://source.unsplash.com/Mn9Fa_wQH-M/800x450&quot; alt=&quot;Demo Image&quot;&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Somin</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry><entry><title type="html">Failure is not an option</title><link href="https://sominshim.github.io/2020/01/29/exploration.html" rel="alternate" type="text/html" title="Failure is not an option" /><published>2020-01-29T12:45:13+09:00</published><updated>2020-01-29T12:45:13+09:00</updated><id>https://sominshim.github.io/2020/01/29/exploration</id><content type="html" xml:base="https://sominshim.github.io/2020/01/29/exploration.html">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
-
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
-
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
-
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
-
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote class=&quot;blockquote&quot;&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;img class=&quot;img-fluid&quot; src=&quot;https://source.unsplash.com/Mn9Fa_wQH-M/800x450&quot; alt=&quot;Demo Image&quot;&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;.&lt;/p&gt;</content><author><name>Somin</name></author><summary type="html">Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</summary></entry></feed>
+조금 더 빨리 만들었으면 좋겠다.&lt;/p&gt;</content><author><name>Somin</name></author><summary type="html">여기엔 Markdown 문법으로 적으면 된다고 한다. 나는 블로그를 만들었을 때 시간이 많이 들었지만, 다른 사람들은 이글을 보고 조금 더 빨리 만들었으면 좋겠다.</summary></entry></feed>
