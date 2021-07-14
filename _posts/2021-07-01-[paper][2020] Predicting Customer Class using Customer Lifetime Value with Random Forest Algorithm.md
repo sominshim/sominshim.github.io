@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[2020] Predicting Customer Class using Customer Lifetime Value with Random Forest Algorithm"
+title: "[paper][2020] Predicting Customer Class using Customer Lifetime Value with Random Forest Algorithm"
 # subtitle: "first post"
 date: 2021-07-01 22:00:0
 background: '/img/posts/02.jpg'

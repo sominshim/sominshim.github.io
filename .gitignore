@@ -1,1 +1,12 @@
-2021-07-04-네이버 웹툰 코테.md
+2021-07-04-[코테] 네이버 웹툰.md
+
+$cat .gitignore
+_site/
+.sass-cache/
+.jekyll-metadata
+Gemfile.lock
+
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
