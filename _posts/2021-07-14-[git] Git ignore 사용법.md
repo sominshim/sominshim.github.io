@@ -17,23 +17,23 @@ commit하고 싶지 않은 파일들을 gitignore파일을 이용하여 숨길 �
 1. git의 관리 하에 있는 project 폴더에 .gitignore 파일을 만든다.
 
 2. .gitignore 파일에 올리고 싶지 않은 파일 이름을 작성한다.
-- 특정 파일을 무시하고 싶을 경우
-    ```
-    raw_data.csv
-    intorduction.pdf
-    ```
+    - 특정 파일을 무시하고 싶을 경우
+        ```
+        raw_data.csv
+        intorduction.pdf
+        ```
 
-- 해당 확장자 파일 전부를 무시하고 싶을 경우
-    ```
-    *.pdf
-    *.dll
-    ```
+    - 해당 확장자 파일 전부를 무시하고 싶을 경우
+        ```
+        *.pdf
+        *.dll
+        ```
 
-- 해당 경로의 파일 전부를 무시하고 싶을 경우
-    ```
-    target/
-    fold_name/
-    ```
+    - 해당 경로의 파일 전부를 무시하고 싶을 경우
+        ```
+        target/
+        fold_name/
+        ```
 ---
 -  사용 도중에 .gitignore 파일을 만든 경우
     ```

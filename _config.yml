@@ -4,7 +4,7 @@ description:        programming study record
 author:             Somin
 baseurl:            ""
 url:                "https://sominshim.github.io"
-theme:              jekyll-theme-clean-blog
+# theme:              jekyll-theme-clean-blog
 
 # Social Profiles
 # twitter_username:   
