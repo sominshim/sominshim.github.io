@@ -143,7 +143,8 @@ Random Forest의 최적 하이퍼 파라미터 값을 찾아 최고의 정확도
     **Step4) Merge Feature and Target variable**
 
     **Step5) Feature Selection**
-
+ 
+ 
     Apply feature importance to rank the most important variables from our features set using the Random Forest feature importance method.
 
     <center><img class="img-fluid" src="/img/posts/210701Figure11.png" alt="Demo Image" width="300" height="300" ></center>
