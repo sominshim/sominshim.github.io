@@ -35,7 +35,8 @@ commit하고 싶지 않은 파일들을 gitignore파일을 이용하여 숨길 �
         fold_name/
         ```
 ---
--  사용 도중에 .gitignore 파일을 만든 경우
+### 사용 도중에 .gitignore 파일을 만든 경우
+
     ```
     git rm -r --cached .
     git add .
