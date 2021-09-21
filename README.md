@@ -1,5 +1,3 @@
 ## Somin Blog
 
 Hi~
-
- 
