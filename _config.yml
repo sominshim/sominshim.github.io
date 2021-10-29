@@ -104,7 +104,7 @@ analytics:
 author:
   name             : "심소민"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "일일 개발 기록 블로그입니다."
+  bio              : "일일 개발 기록 블로그"
   location         : "South Korea"
   email            : # "shimsomin20@gmail.com"
   links:
@@ -271,7 +271,7 @@ defaults:
       author_profile: true
       # read_time: true
       comments: true
-      share: true
+      # share: true
       related: true
       show_date: true
 
