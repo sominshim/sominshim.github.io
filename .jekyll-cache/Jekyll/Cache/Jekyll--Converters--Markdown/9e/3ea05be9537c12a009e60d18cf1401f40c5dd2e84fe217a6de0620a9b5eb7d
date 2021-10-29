@@ -1,0 +1,11 @@
+I"¢<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Enter a: "</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Enter b: "</span><span class="p">))</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">division</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">division</span><span class="p">)</span>
+<span class="k">except</span> <span class="nb">ZeroDivisionError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Please enter valid values."</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+</code></pre></div></div>
+
+:ET
