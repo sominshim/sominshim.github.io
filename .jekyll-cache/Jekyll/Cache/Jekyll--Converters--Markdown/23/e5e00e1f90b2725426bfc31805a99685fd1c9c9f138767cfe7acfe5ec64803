@@ -1,0 +1,40 @@
+I"�<h2 id="2-sql-작업">2. SQL 작업</h2>
+
+<h3 id="01-데이터-검색">01 데이터 검색</h3>
+
+<p>SELECT [검색할 컬럼1, 컬럼2, ..] 
+FROM [테이블명];</p>
+
+<pre><code class="language-SQL">SELECT [검색할 컬럼1, 컬럼2, ..] 
+FROM [테이블명];
+</code></pre>
+
+<ul>
+  <li>
+    <p>Example</p>
+
+    <p>book 테이블에서 모든 책의 title과 author 컬럼을 검색한다.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">title</span><span class="p">,</span> <span class="n">author</span>
+<span class="k">FROM</span> <span class="n">book</span><span class="p">;</span>
+</code></pre></div>    </div>
+
+    <p>검색할 컬럼에 <strong>*</strong>을 입력하면 해당 테이블(book)의 모든 데이터 검색할 수 있다.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">book</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="02-데이터-삽입">02 데이터 삽입</h3>
+
+<h3 id="03-데이터-수정">03 데이터 수정</h3>
+
+<h3 id="04-데이터-삭제">04 데이터 삭제</h3>
+
+<h3 id="05-데이터베이스-생성">05 데이터베이스 생성</h3>
+
+<h3 id="06-테이블-생성">06 테이블 생성</h3>
+
+:ET

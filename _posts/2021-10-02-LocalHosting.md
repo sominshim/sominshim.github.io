@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "로컬에서 GitPages 호스팅하기"
+title:  "로컬에서 GitHub Pages 호스팅하기"
 categories: [GitHub Pages]
 tags: [Blog]
 

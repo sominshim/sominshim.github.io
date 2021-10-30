@@ -1,0 +1,34 @@
+I"�<p>데이터 집합에 대해서 동작하는 그룹(aggregate) 함수를 제공하고 있다.</p>
+
+<ol>
+  <li>
+    <p>COUNT()</p>
+  </li>
+  <li>
+    <p>MIN()과 MAX()</p>
+  </li>
+  <li>
+    <p>SUM()</p>
+  </li>
+  <li>
+    <p>AVG()</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="group-by-절">GROUP BY 절</h2>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="err">필드이름</span><span class="p">,</span> <span class="err">그룹함수</span><span class="p">(</span><span class="err">필드이름</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="err">테이블이름</span>
+<span class="p">[</span><span class="k">WHERE</span> <span class="err">조건</span><span class="p">]</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="err">필드이름</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="having-절">HAVING 절</h2>
+
+<p>HAVING 절은 SELECT 문의 WHERE 절처럼 GROUP BY 절에 의해 반환되는 결과 집합의 조건을 설정할 수 있게 해줍니다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+
+:ET

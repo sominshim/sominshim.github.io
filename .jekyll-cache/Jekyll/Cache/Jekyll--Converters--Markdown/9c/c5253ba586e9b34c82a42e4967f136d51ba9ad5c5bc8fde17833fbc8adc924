@@ -1,0 +1,22 @@
+I"�<ol>
+  <li>
+    <p>COUNT()</p>
+  </li>
+  <li>
+    <p>MIN()과 MAX()</p>
+  </li>
+  <li>
+    <p>SUM()</p>
+  </li>
+  <li>
+    <p>AVG()</p>
+  </li>
+</ol>
+
+<hr />
+
+<p>GROUP BY 절</p>
+
+<p>HAVING 절</p>
+
+:ET

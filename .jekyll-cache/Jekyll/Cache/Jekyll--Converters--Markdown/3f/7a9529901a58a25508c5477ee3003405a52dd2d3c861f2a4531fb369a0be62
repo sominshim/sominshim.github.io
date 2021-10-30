@@ -1,0 +1,30 @@
+I"5<h2 id="1-데이터베이스란-sql이란">1. 데이터베이스란? SQL이란?</h2>
+
+<p><strong>데이터베이스(Database, DB)는 여러 사람이 공유하여 사용할 목적으로 통합하여 관리되는 데이터의 집합이다.</strong></p>
+
+<p>Maria DB, Amazon Redshift, Oracle DB 등 많은 종류가 있다.</p>
+
+<p>종류에 따라 사용 방법이 조금씩 다르지만, <br />
+데이터베이스에서 검색과 분석에 사용되는 <u>기본 사용 방법은 동일</u>하다 !!</p>
+
+<p>데이터베이스를 제어하는 방법: <strong>SQL</strong> 을 사용한다. <strong>S</strong>tructured <strong>Q</strong>uery <strong>L</strong>anguage 의 약자로, <u>데이터베이스에 접근하고 조작하기 위한 표준 언어</u>이다.</p>
+
+<h2 id="2-데이터베이스의-종류">2. 데이터베이스의 종류</h2>
+
+<p>데이터베이스는 크게 관계형 데이터베이스와 비관계형 데이터베이스로 나눌 수 있다.</p>
+
+<h3 id="--관계형-데이터베이스">- 관계형 데이터베이스</h3>
+
+<p>관계형 데이터베이스(Relational Database, RDB)란? 하나 이상의 테이블로 이루어지며, 서로 연결된 데이터를 가지고 있고 SQL을 통해 제어 가능하다.</p>
+
+<ul>
+  <li>관계형 데이터베이스 구조.</li>
+</ul>
+
+<center><img src="../../images/2021-10-03-StartSQL/img_mysql_table.png" style="zoom:50%;" /></center>
+
+<center><sup>출처: tcpschool.com</sup></center>
+
+<p>테이블은 컬럼(Column)과 레코드(Record)로 구성된 표 모든 테이블은 고유의 이름으로 구분된다.</p>
+
+:ET

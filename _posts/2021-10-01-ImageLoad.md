@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "이미지 간단하게 업로드하는 방법"
+title:  "GitBlog에 이미지 간단하게 업로드하는 방법"
 categories: [GitHub Pages]
 tags: [Blog]
 
@@ -22,7 +22,7 @@ tags: [Blog]
 - 이미지를 **drag and drop** 하면 자동으로 images 폴더에 이미지 파일이 복사된다.
 
 먼저, [Typora](https://typora.io/) 사이트에서 프로그램을 설치한다.
-  
+
 
 <center>서식 → 이미지 → 전역 이미지 설정</center>
 
