@@ -40,7 +40,7 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1em;
+    padding-left: 15em;
     padding-right: 1em;
     -webkit-animation: $intro-transition;
     animation: $intro-transition;
@@ -65,14 +65,14 @@
     outline: none;
     box-shadow: none;
     background-color: transparent;
-    font-size: $type-size-3;
+    font-size: $type-size-4;
 
     @include breakpoint($large) {
-      font-size: $type-size-2;
+      font-size: $type-size-4;
     }
 
     @include breakpoint($x-large) {
-      font-size: $type-size-1;
+      font-size: $type-size-4;
     }
   }
 
@@ -99,7 +99,7 @@
     }
 
     @include breakpoint($x-large) {
-      width: 50%;
+      width: 70%;
     }
   }
 

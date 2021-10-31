@@ -59,7 +59,7 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : # true, false (default)
+search                   : true # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
 algolia:
@@ -102,7 +102,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "심소민"
+  name             : #"심소민"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "일일 개발 기록 블로그"
   location         : "South Korea"

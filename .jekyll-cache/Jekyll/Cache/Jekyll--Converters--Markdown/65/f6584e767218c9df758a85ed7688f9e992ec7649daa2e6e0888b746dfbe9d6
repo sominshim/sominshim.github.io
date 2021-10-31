@@ -1,0 +1,276 @@
+I"�(<p>여러 테이블의 정보를 한 번에 조회할 수 없을까?</p>
+
+<p>데이터베이스 내의 여러 테이블을 하나의 테이블이나 결과 집합으로 표현하기 위해서 사용하는 것이 <code class="language-plaintext highlighter-rouge">JOIN</code> 이다.</p>
+
+<p>표준 SQL에서는 레코드를 조합하는 방식에 따라 JOIN을 다음과 같이 구분한다.</p>
+
+<ol>
+  <li>
+    <p>INNER JOIN</p>
+  </li>
+  <li>
+    <p>LEFT JOIN</p>
+  </li>
+  <li>
+    <p>RIGHT JOIN</p>
+  </li>
+</ol>
+
+<h2 id="inner-join">INNER JOIN</h2>
+
+<p>INNER JOIN은 ON 절과 함께 사용되며, ON 절의 조건을 만족하는 데이터만을 가져온다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="err">필드이름</span>
+<span class="k">FROM</span> <span class="err">테이블이름</span>
+<span class="p">[</span><span class="k">INNER</span><span class="p">]</span> <span class="k">JOIN</span> <span class="err">두번째테이블이름</span>
+<span class="k">ON</span> <span class="err">조건</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>rental 테이블과 user 테이블의 정보 중 user_id가 같은 것끼리 연결</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> 
+<span class="k">FROM</span> <span class="n">rental</span>
+<span class="p">[</span><span class="k">INNER</span><span class="p">]</span> <span class="k">JOIN</span> <span class="n">customer</span>
+<span class="k">ON</span> <span class="n">customer</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">rental</span><span class="p">.</span><span class="n">user_id</span><span class="p">;</span>
+</code></pre></div>    </div>
+    <div style="width:50%; float:left;">
+  <table width="50%" height="200" cellspacing="5">
+      <caption>customer 테이블</caption>
+      <colgroup>
+          <col span="1" class="col1" style="border:2px solid red;" /><!--한열묶기-->
+          <col span="2" class="col2" /><!--두열묶기-->
+          <col span="3" class="col3" /><!--세열묶기-->
+      </colgroup>
+      <thead>
+          <tr align="center">
+              <th>id </th>
+              <th>name</th>
+              <th>email</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr align="center"><!-- 첫번째 줄 시작 -->
+              <td>1</td>
+              <td>chanhwan</td>
+              <td>choich@shimlog.com</td>
+          </tr><!-- 첫번째 줄 끝 -->
+          <tr align="center"><!-- 두번째 줄 시작 -->
+              <td>2</td>
+              <td>haesol</td>
+              <td>sunsol@shimlog.com</td>
+          </tr><!-- 두번째 줄 끝 -->
+          <tr align="center"><!-- 세번째 줄 시작 -->
+              <td>3</td>
+              <td>jaewoon</td>
+              <td>jaejae@shimlog.com</td>
+          </tr><!-- 세번째 줄 끝 -->
+      </tbody>
+  </table>
+  </div>
+
+    <div style="width:50%; float:left;">
+  <table width="50%" height="200" cellspacing="5">
+      <caption>rental 테이블</caption>
+      <colgroup>
+          <col span="1" class="col1" /><!--한열묶기-->
+          <col span="1" class="col2" style="border:2px solid red;" /><!--두열묶기-->
+          <col span="1" class="col3" /><!--세열묶기-->
+      </colgroup>
+      <thead>
+          <tr align="center">
+              <th>rental_id</th>
+              <th>user_id</th>
+              <th>book_id</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr align="center"><!-- 첫번째 줄 시작 -->
+              <td>1</td>
+              <td>1</td>
+              <td>1000</td>
+          </tr><!-- 첫번째 줄 끝 -->
+          <tr align="center"><!-- 두번째 줄 시작 -->
+              <td>2</td>
+              <td>1</td>
+              <td>1001</td>
+          </tr><!-- 두번째 줄 끝 -->
+          <tr align="center"><!-- 세번째 줄 시작 -->
+              <td>3</td>
+              <td>3</td>
+              <td>1004</td>
+          </tr><!-- 세번째 줄 끝 -->
+      </tbody>
+  </table>
+  </div>
+
+    <p style="text-indent: 8em; margin-block-end: 0;"><small>    customer, rental join 테이블  </small></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center">rental_id</th>
+          <th style="text-align: center">name</th>
+          <th style="text-align: center">email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center">1</td>
+          <td style="text-align: center">chanhwan</td>
+          <td style="text-align: center">choich@shimlog.com</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">2</td>
+          <td style="text-align: center">Chanhwan</td>
+          <td style="text-align: center">choich@shimlog.com</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">3</td>
+          <td style="text-align: center">Jaewoon</td>
+          <td style="text-align: center">jaejae@shimlog.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h2 id="left-join">LEFT JOIN</h2>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="err">필드이름</span>
+<span class="k">FROM</span> <span class="err">테이블이름</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="err">두번째테이블이름</span>
+<span class="k">ON</span> <span class="err">조건</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>rental 테이블과 user 테이블의 정보 중 user_id가 같은 것끼리 연결</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> 
+<span class="k">FROM</span> <span class="n">rental</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">customer</span>
+<span class="k">ON</span> <span class="n">customer</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">rental</span><span class="p">.</span><span class="n">user_id</span><span class="p">;</span>
+</code></pre></div>    </div>
+
+    <div style="width:50%; float:left;">
+  <table width="50%" height="200" cellspacing="5">
+      <caption>customer 테이블</caption>
+      <colgroup>
+          <col span="1" class="col1" /><!--한열묶기-->
+          <col span="2" class="col2" /><!--두열묶기-->
+          <col span="3" class="col3" /><!--세열묶기-->
+      </colgroup>
+      <thead>
+          <tr align="center">
+              <th>id </th>
+              <th>name</th>
+              <th>email</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr align="center"><!-- 첫번째 줄 시작 -->
+              <td>1</td>
+              <td>chanhwan</td>
+              <td>choich@shimlog.com</td>
+          </tr><!-- 첫번째 줄 끝 -->
+          <tr align="center" style="border:2px solid red;"><!-- 두번째 줄 시작 -->
+              <td>2</td>
+              <td>haesol</td>
+              <td>sunsol@shimlog.com</td>
+          </tr><!-- 두번째 줄 끝 -->
+          <tr align="center"><!-- 세번째 줄 시작 -->
+              <td>3</td>
+              <td>jaewoon</td>
+              <td>jaejae@shimlog.com</td>
+          </tr><!-- 세번째 줄 끝 -->
+      </tbody>
+  </table>
+  </div>
+
+    <div style="width:50%; float:left;">
+  <table width="50%" height="200" cellspacing="5">
+      <caption>rental 테이블</caption>
+      <colgroup>
+          <col span="1" class="col1" /><!--한열묶기-->
+          <col span="1" class="col2" style="border:2px solid red;" /><!--두열묶기-->
+          <col span="1" class="col3" /><!--세열묶기-->
+      </colgroup>
+      <thead>
+          <tr align="center">
+              <th>rental_id</th>
+              <th>user_id</th>
+              <th>book_id</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr align="center"><!-- 첫번째 줄 시작 -->
+              <td>1</td>
+              <td>1</td>
+              <td>1000</td>
+          </tr><!-- 첫번째 줄 끝 -->
+          <tr align="center"><!-- 두번째 줄 시작 -->
+              <td>2</td>
+              <td>1</td>
+              <td>1001</td>
+          </tr><!-- 두번째 줄 끝 -->
+          <tr align="center"><!-- 세번째 줄 시작 -->
+              <td>3</td>
+              <td>3</td>
+              <td>1004</td>
+          </tr><!-- 세번째 줄 끝 -->
+      </tbody>
+  </table>
+  </div>
+    <p style="text-indent: 8em; margin-block-end: 0;"><small>    customer, rental join 테이블  </small></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center">rental_id</th>
+          <th style="text-align: center">name</th>
+          <th style="text-align: center">email</th>
+          <th style="text-align: center">rental_id</th>
+          <th style="text-align: center">Book_id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center">1</td>
+          <td style="text-align: center">chanhwan</td>
+          <td style="text-align: center">choich@shimlog.com</td>
+          <td style="text-align: center">1</td>
+          <td style="text-align: center">1000</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">2</td>
+          <td style="text-align: center">chanhwan</td>
+          <td style="text-align: center">choich@shimlog.com</td>
+          <td style="text-align: center">2</td>
+          <td style="text-align: center">1001</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">2</td>
+          <td style="text-align: center">haesol</td>
+          <td style="text-align: center">haesol@shimlog.com</td>
+          <td style="text-align: center"><span style="color:red">null</span></td>
+          <td style="text-align: center"><span style="color:red">null</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center">3</td>
+          <td style="text-align: center">jaewoon</td>
+          <td style="text-align: center">jaejae@shimlog.com</td>
+          <td style="text-align: center">3</td>
+          <td style="text-align: center">1004</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h2 id="right-join">RIGHT JOIN</h2>
+
+<p>정리</p>
+
+<p><img src="../../images/2021-10-10-JOIN/img.png" alt="" /></p>
+:ET

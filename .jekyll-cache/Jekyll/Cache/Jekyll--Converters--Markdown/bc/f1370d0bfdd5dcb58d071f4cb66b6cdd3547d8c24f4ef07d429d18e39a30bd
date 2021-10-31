@@ -1,0 +1,76 @@
+I"�<p>데이터베이스를 설계할 때 필요한 지식에 대한 내용이다.</p>
+
+<p>먼저, 데이터베이스가 무엇인지에 대한 내용은 <a href="../StartSQL">이전 포스트</a>를 참고하면 된다.</p>
+
+<h2 id="데이터모델링이란">데이터모델링이란?</h2>
+
+<p>효율적으로 데이터베이스를 구축하기 위해 데이터베이스의 <strong>뼈대를 세우는 작업</strong>이다.</p>
+
+<p>다음과 같은 단계로 진행된다.</p>
+
+<ol>
+  <li><strong>요구 사항 정리</strong>: 데이터가 어떠한 형택, 어떤 목적을 가지고 있는지 정리</li>
+  <li><strong>개념적 데이터 모델 설계</strong>: 핵심 개체를 찾고, 각 개체 간의 관계를 정리</li>
+  <li><strong>논리적 데이터 모델 설계</strong>: 실제 데이터베이스로 구현하기 위한 모델링</li>
+  <li><strong>물리적 데이터 모델 설계</strong>: 데이터가 어떻게 컴퓨터에 저장될 지 설계</li>
+</ol>
+
+<h2 id="데이터베이스-네이밍-규칙">데이터베이스 네이밍 규칙</h2>
+
+<p>유지보수와 의미의 명확성을 전달하기 위해 네이밍 규칙을 설정하는 것이 좋다.</p>
+
+<h3 id="공통-규칙">공통 규칙</h3>
+
+<ol>
+  <li>줄임말 사용은 최소화한다. (단, 사용할 경우 범용적으로 사용되는 줄임말을 사용해야 한다.)
+    <ul>
+      <li>kb_image (X) → kickboard_image (O)</li>
+      <li>tb_KickboardInfo (△) (Info: Information의 줄임말)</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="테이블-네이밍-규칙">테이블 네이밍 규칙</h3>
+
+<ol>
+  <li>테이블 명을 작성할 때는 <strong>파스칼 표기법을 사용</strong>한다.
+    <ul>
+      <li>kickboard_rental (X) → KickboardRental (O)</li>
+      <li>customer_info (X) → CustomerInfo (O)</li>
+    </ul>
+  </li>
+  <li>테이블, 뷰(View)임을 한 눈에 확인 할 수 있도록 <strong>테이블 명 앞에는 ‘tb_’, ‘v_’ 를 붙인다.</strong>
+    <ul>
+      <li>tb_KickboardRental (킥보드 대여와 관련된 테이블)</li>
+      <li>v_KickboardInfoForAnalysis (데이터 분석을 위해 필요한 정보만 모아 둔 가상 테이블)</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="속성-네이밍-규칙">속성 네이밍 규칙</h3>
+
+<ol>
+  <li>속성 명을 작성할 때는 <strong>스네이크 표기법을 활용</strong>한다.
+    <ul>
+      <li>customerID (X) → customer_id (O)</li>
+      <li>CustomerTel (X) → customer_tel (O)</li>
+    </ul>
+  </li>
+  <li>유일키, 외래키 등은 한눈에알아볼수있도록<strong>속성명앞에‘pk_’,‘fk_’를붙인다.</strong><br />
+(단, 중복으로 설정되어 있는 경우 외래키 &gt; 유일키 순으로 작성한다.)
+    <ul>
+      <li>pk_kickboard_id</li>
+      <li>fk_pk_customer_id</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="키-key">키 (Key)</h2>
+
+<h3 id="유일키-primary-key">유일키 (Primary Key)</h3>
+
+<h3 id="복합키-composite-key">복합키 (Composite Key)</h3>
+
+<h3 id="외래키-foreign-key">외래키 (Foreign Key)</h3>
+
+:ET
