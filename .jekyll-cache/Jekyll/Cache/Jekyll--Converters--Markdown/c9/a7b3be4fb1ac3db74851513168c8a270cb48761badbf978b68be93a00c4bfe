@@ -1,0 +1,5 @@
+I"O<p>다음과 같은 코드를 작성할 때, <strong>SyntaxError: non-default argument follows default argument</strong> 에러 메세지가 나온다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def count(element=1, a):   
+    return a + element
+</code></pre></div></div>
+:ET

@@ -1,0 +1,25 @@
+I"�<blockquote>
+  <p>Overview</p>
+  <ol>
+    <li>Standard Deviation</li>
+    <li>Boxplots</li>
+    <li>DBSCAN Clustering</li>
+    <li>Isolation Forest</li>
+    <li>Robust Random Cut Forest</li>
+  </ol>
+</blockquote>
+
+<h3 id="1-standard-deviation">1. Standard Deviation</h3>
+
+<h3 id="2-boxplots">2. Boxplots</h3>
+
+<h3 id="3-dbscan-clustering">3. DBSCAN Clustering</h3>
+
+<h3 id="4-isolation-forest">4. Isolation Forest</h3>
+
+<h3 id="5-robust-random-cut-forest">5. Robust Random Cut Forest</h3>
+
+<hr />
+<p><a href="https://towardsdatascience.com/5-ways-to-detect-outliers-that-every-data-scientist-should-know-python-code-70a54335a623">참고 사이트</a>
+<a href="https://www.kaggle.com/nareshbhat/outlier-the-silent-killer">[kaggle] outlier code</a></p>
+:ET

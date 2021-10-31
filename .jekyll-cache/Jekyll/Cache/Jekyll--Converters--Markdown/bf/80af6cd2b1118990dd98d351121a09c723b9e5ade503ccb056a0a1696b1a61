@@ -1,0 +1,151 @@
+I"s <h3 id="왜-git-사용하는가">왜 Git 사용하는가?</h3>
+
+<p>혼자 작업하는 것에 집중해서 답변하자면,</p>
+
+<p>여러분이 뭔가를 만들고 프로젝트를 진행하면서 컴퓨터의 특정 폴더에 작업물을 저장해놓는다.</p>
+
+<p>Git은 이 폴더 안에, 시간 여행이 가능한 평행 우주들을 만드는 거라고 생각하면 된다.</p>
+
+<p>시간 여행이 가능하다는 건, 내가 수습하기 어려운 실수를 했거나 전이랑 뭐가 바뀌었는지 헷갈릴 때, 언제든 폴더 내 상태를 과거로 돌릴 수 있다는 것이다.</p>
+
+<p>Ctrl + Z 이런 수준이 아니라 아예 모든 파일들의 저장된 상태를 아까로, 엊그제로, 혹은 아예 맨 처음으로 돌려놓을 수 있다는 것이다. 또는 과거로 돌아가서 필요한 것만 챙겨서 현재나 다른 과거로 가져올 수도 있다.</p>
+
+<p>예전처럼 매번 폴더를 압축해서 시점별로 저장해 둘 필요 없이</p>
+
+<p>평행우주를 만든다는 것이 무슨 말인가</p>
+
+<p>여러분이 뭔가 만들다가 메인 작업에서 해보기에는 위험이 있는  좀 실험적인 시도를 해보거나 고객이 뭘 좋아할지 몰라서 다른 버전으로도 소프트웨어를 작업해보고 싶을 경우,</p>
+
+<p>Git이 없을 때는 폴더 전체를 따로 복사해서 작업해야겠지만</p>
+
+<p>Git은 폴더 안에 여러 평행 우주를 생성해서 여기선 이 버전, 저기선 저 버전 자유자재로 우주들을 넘나들며 작업하다가 저쪽에서 작업하던 실험적 기능이 마음에 들면 이쪽 우주로 가져오고 할 수 있다는 것이다.</p>
+
+<p>이것이 프로그래밍에서 왜 중요한지는 실습하면서 알게 될 것이다.</p>
+
+<p>더 많은 이유들이 있지만 ,, 생략하고</p>
+
+<h3 id="git-사용법-설명">Git 사용법 설명</h3>
+
+<p>Command line Interface 로 명령어를 입력하는 것과 마우스로 쓸 수 있게 GUI로 만들어진 소프트웨어 대표적으로 Source Tree를 사용하는 것이 있다.</p>
+
+<p>프로그래머라면 CLI에 익숙해져야 하지만 초보에게는 부담스럽기도 하고 소스트리로 할 수 있는 더 편리한 기능들도 많으니까 이 강의에서는 각 기능들마다 CLI와 Source Tree 둘 다를 사용할 것이다.</p>
+
+<h3 id="준비물">준비물</h3>
+
+<ol>
+  <li>Git</li>
+  <li>IDE (코딩할 때 쓰는 프로그램) Visual Studio Code 사용</li>
+</ol>
+
+<h3 id="step1-git저장소-만들기">Step1. Git저장소 만들기</h3>
+
+<p>원하는 위치에 프로젝트를 진행할 폴더를 만든다.</p>
+
+<p>그리고 이 폴더를 VS code로 연다.</p>
+
+<p>코드 작성 후 저장.</p>
+
+<p>이제 이 폴더를 Git이 관리하도록 만든다.</p>
+
+<p>mac에서 terminal을 열고 폴더 경로로 찾아 들어간다.</p>
+
+<p>좀 더 쉽게는 VS code에서 <code class="language-plaintext highlighter-rouge">Ctrl</code><code class="language-plaintext highlighter-rouge"> </code>Ctrl Shift ``: 단축키를 이용해 프로그램 하단에 해당 폴더 경로의 terminal 을 열 수 있다.</p>
+
+<p>이 곳에 Git 명령어들을 입력한다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">git init</code> : 빈 Git 저장소를 만든다.</p>
+
+<p>→ 이 폴더가 Git의 관리 하에 들어간 것이다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">git config --global user.name [내 이름]</code>  : 이름 등록</p>
+
+<p><code class="language-plaintext highlighter-rouge">git config --global user.email [내 메일주소]</code>  : 메일 등록</p>
+
+<p>이제 이 폴더에서 솜겨진 파일까지 보이도록 하면, .git 폴더가 생긴다.</p>
+
+<p>이 폴더 안에 시공간이 저장된다.</p>
+
+<p>소스트리로 하는법</p>
+
+<h3 id="step2-현재-시점-저장하기">Step2. 현재 시점 저장하기</h3>
+
+<p>타임캡슐에 묻으려면, 일단 타임캡슐에 담아야 한다.</p>
+
+<p>담을 게 뭐가 있는지 Git의 눈으로 살펴보자</p>
+
+<p><code class="language-plaintext highlighter-rouge">git status</code>: git</p>
+
+<p>Untracted, git에서 아직 쳐다보지 않는다는 뜻</p>
+
+<p>추적되지 않는 파일 → 캡슐에 담기지 않은 파일, 정확히는 이 파일들이 만들어졌다는 사실을 의미한다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">git add -A</code>:  Untracted files 전체를 git의 타임캡슐에 넣는다</p>
+
+<p>다시 git status를 보면 Changes to be committed 로 바뀐다.</p>
+
+<p>묻을 것들 이라고 이해하면 된다.</p>
+
+<p>이제 묻을 준비를 끝냈다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">git commit -m "설명"</code> :</p>
+
+<p>캡슐을 묻을 때는 이게 무슨 캡슐인지 설명을 꽂아놔야 쓸데없는 삽질을 안하겠죠</p>
+
+<p>자 이제 첫번째 타임캡슐을 묻었다.</p>
+
+<p>git status를 보면, 담아서 묻을 게 없다고 나온다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">git push origin master</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">git log</code>: 묻은 캡슐들을 볼 수 있다.</p>
+
+<p>캡슐의 정보들과 메세지들이 나온다.</p>
+
+<p>→ 기존의 입력 줄이 안 뜨고 글자도 안쳐진다면 vi editor가 실행중인거니까 <code class="language-plaintext highlighter-rouge">:q</code> 를 눌러서 빠져나오면 된다.</p>
+
+<p>소스트리에서는 히스토리에서 보다 직관적으로 볼 수 있다.</p>
+
+<h3 id="step3-과거의-상태로-돌아가보자">Step3. 과거의 상태로 돌아가보자,</h3>
+
+<p><strong>3.1 과감한 방법 : 과거 이후 행적을  복원할 여지 없이 완전히 지운다.</strong></p>
+
+<p>아까 <code class="language-plaintext highlighter-rouge">git log</code> 로 확인한 타임 캡슐 중 돌아가고 싶은 캡슐의 commit 뒤 일련번호 앞 여섯자리를 복사한다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">git reset 일련번호6자리 --hard</code>: 해당 캡슐의 시점으로 이동했다는 메시지와 함께 이동됨.</p>
+
+<p>소스트리에서는, 히스토리&gt; 시점 우클릭 &gt; 이 커밋까지 현재 브랜치를 초기화&gt; 사용중인 모드 옵션을 Hard로 변경&gt; 확인</p>
+
+<p>⇒ 다시 미래 시점으로 가지 못한다.</p>
+
+<p><strong>3.2 과거로 돌아가기 - Revert</strong></p>
+
+<p>미래에 한 발을 걸치고 과거로 가는 방법</p>
+
+<p>reset 대신 revert를 쓴다.</p>
+
+<p>아까 <code class="language-plaintext highlighter-rouge">git log</code> 로 확인한 타임 캡슐 중 취소하고 싶은 캡슐의 commit 뒤 일련번호 앞 여섯자리를 복사한다. 가장 최근 거</p>
+
+<p><code class="language-plaintext highlighter-rouge">git revert 일련번호6자리</code>: 새 커밋 메시지를 작성하는 화면이 나온다. 그대로 저장하겠다는 <code class="language-plaintext highlighter-rouge">vi</code>명령어 = <code class="language-plaintext highlighter-rouge">:wq</code> 를 입력</p>
+
+<p>파일들이 과거 상태로 돌아와 있다.</p>
+
+<p>그런데 로그를 확인해보면 reset처럼 이 시점 이후가 지워진 것이 아니라 이 뒤에 새 캡슐이 묻힌 것을 볼 수 있다.</p>
+
+<p>소스트리에서는, 히스토리 &gt; 취소할 시점 우클릭 &gt; 커밋 되될리기</p>
+
+<h3 id="step4-평행우주-넘나들기---branch">Step4. 평행우주 넘나들기 - Branch</h3>
+
+<p><code class="language-plaintext highlighter-rouge">git branch 브랜치이름</code>: 브랜치 만들기</p>
+
+<p>현 시점에서 두 미래로 분기하겠다는 의미이다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">git branch</code> : 기존 branch master와 새로만든 branch가 존재하는 것을 확인할 수 있다.</p>
+
+<p>새로 만든 branch 우주로 넘어가려면 <code class="language-plaintext highlighter-rouge">git checkout 브랜치이름</code></p>
+
+<p>아무런 변화가 없다. 왜냐하면 원 branch의 현 상태를 그대로 가져가기 때문.</p>
+
+<p>그럼 이 평행우주에서 나만의 작업을 해보자.</p>
+
+<p>원 상태로 되돌아가고 싶을 때, <code class="language-plaintext highlighter-rouge">git checkout 이동할 branch 이름</code></p>
+:ET
