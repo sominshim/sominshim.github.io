@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "[git] Git ignore 사용법"
-categories: [git]
-tags: [git]
+categories: [Git]
+# tags: [git]
 
 toc: true
 toc_sticky: true

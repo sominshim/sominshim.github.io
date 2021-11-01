@@ -1,0 +1,1954 @@
+I"߰
+<!-- <!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+
+<!-- begin _includes/seo.html --><title>로컬에서 GitHub Pages 호스팅하기 | 심로그</title>
+<meta name="description" content="지금까지 포스팅을 하면서,  commit, push 후 변경된 웹페이지를 온라인 상에서 확인해야 하고,  온라인 상에 코드가 반영되기까지 딜레이가 있다." />
+
+
+  <meta name="author" content="  " />
+  
+  <meta property="article:author" content="  " />
+  
+
+
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="심로그" />
+<meta property="og:title" content="로컬에서 GitHub Pages 호스팅하기" />
+<meta property="og:url" content="http://localhost:4000/github%20pages/LocalHosting/" />
+
+
+  <meta property="og:description" content="지금까지 포스팅을 하면서,  commit, push 후 변경된 웹페이지를 온라인 상에서 확인해야 하고,  온라인 상에 코드가 반영되기까지 딜레이가 있다." />
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-10-02T00:00:00+09:00" />
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/github%20pages/LocalHosting/" />
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "somin",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+  <meta name="naver-site-verification" content="f02853291b066ae6de1f47cec265692f11f9081b" />
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="심로그 Feed" />
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css" />
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" /></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.ico/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo.ico/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/logo.ico/favicon-16x16.png" />
+<link rel="mask-icon" href="/assets/logo.ico/safari-pinned-tab.svg" color="#5bbad5" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="theme-color" content="#ffffff" />
+
+<!-- <link rel="manifest" href="/site.webmanifest"> -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          심로그
+          <span class="site-subtitle">small positive action</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">Category</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tag</a>
+            </li><li class="masthead__menu-item">
+              <a href="/portfolio/">Portfolio</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope="" itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+          <a href="/categories/#github-pages" itemprop="item"><span itemprop="name">Github pages</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">로컬에서 GitHub Pages 호스팅하기</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope="" itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">  </a>
+    </h3>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="himsomin20@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/sominshim/" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+
+  
+    <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+
+
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <!--전체 글 수-->
+      <li>
+            ✓ <span style="font-family:'Cafe24Oneprettynight';">Total posts:&lt;/style&gt; <span style="font-family:'Coming Soon';">23&lt;/style&gt; <span style="font-family:'Cafe24Oneprettynight';">&lt;/style&gt; 
+      &lt;/li&gt;
+      <li>
+
+        <!--span 태그로 카테고리들을 크게 분류 -->
+        <span class="nav__title"> Front-end </span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                
+                    <!--git-->
+
+                    
+
+                    
+
+                
+                    <!--paper-->
+
+                    
+
+                    
+
+                
+                    <!--book-->
+
+                    
+
+                    
+
+                
+                    <!--Server-->
+
+                    
+
+                    
+
+                
+                    <!--기술동향-->
+
+                    
+
+                    
+
+                
+                    <!--Python-->
+
+                    
+
+                    
+
+                
+                    <!--GitHub Pages-->
+
+                    
+
+                    
+
+                
+                    <!--Database-->
+
+                    
+
+                    
+
+                
+            </ul>
+
+            
+        
+        <!--span 태그로 카테고리들을 크게 분류 -->
+        <span class="nav__title"> Back-end </span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+                        <span class="nav__sub-title">
+                        <a href="/categories/database">
+                            Database (12)
+                        </a>
+                        </span>
+                    
+
+                    
+
+                
+            </ul>
+
+        <!--span 태그로 카테고리들을 크게 분류 -->
+        <span class="nav__title"> Algorithm </span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+            </ul>
+
+
+        <!--span 태그로 카테고리들을 크게 분류 -->
+        <span class="nav__title"> Etc </span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                
+
+                    
+
+                    
+
+                    
+                        <span class="nav__sub-title">
+                        <a href="/categories/git">
+                            Git (2)
+                        </a>
+                        </span>
+                    
+
+                
+
+                    
+
+                    
+                        <span class="nav__sub-title">
+                        <a href="/categories/paper">
+                            paper (1)
+                        </a>
+                        </span>
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                    
+
+                
+
+                    
+                        <span class="nav__sub-title">
+                        <a href="/categories/github-pages" style="color: red;">
+                            GitHub Pages (2)
+                        </a>
+                        </span>
+                    
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                    
+
+                
+            </ul>
+
+            
+            
+      </li>
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+  
+
+  &lt;/div&gt;
+
+
+  <article class="page h-entry" itemscope="" itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="로컬에서 GitHub Pages 호스팅하기" />
+    <meta itemprop="description" content="지금까지 포스팅을 하면서, commit, push 후 변경된 웹페이지를 온라인 상에서 확인해야 하고, 온라인 상에 코드가 반영되기까지 딜레이가 있다." />
+    <meta itemprop="datePublished" content="2021-10-02T00:00:00+09:00" />
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/github%20pages/LocalHosting/" class="u-url" itemprop="url">로컬에서 GitHub Pages 호스팅하기
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-10-02T00:00:00+09:00">2021-10-02</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <p>지금까지 포스팅을 하면서, <br />
+commit, push 후 변경된 웹페이지를 온라인 상에서 확인해야 하고, <br />
+온라인 상에 코드가 반영되기까지 딜레이가 있다.</p>
+
+<p>그래서 로컬 PC에서 블로그의 변경 사항을 실시간으로 확인할 수 있는 방법을 사용할 것이다.</p>
+
+<p>이 방법을 진행하기 위해서는 몇가지 설치가 필요하다.</p>
+
+<p><a href="https://jekyllrb.com/docs/">링크</a> 에 들어가서 Instructions 를 차례대로 진행하면 된다.</p>
+
+<p><img src="../../images/2021-10-02-LocalHosting/image-20211029150541702.png" alt="image-20211029150541702" style="zoom:50%;" /></p>
+
+<ol>
+  <li>
+    <p>자기 os 환경에 맞는 링크를 클릭하여 Ruby 프로그램을 설치한다. (with devkit, 최신(첫번째) 프로그램 링크 클릭 → 동의 → 3 enter)</p>
+  </li>
+  <li>
+    <p>terminal 또는 cmd 창에서 Jekyll bundler 를 설치한다.</p>
+  </li>
+  <li>
+    <p>만약 GitPages가 생성된 상태라면 생략.</p>
+  </li>
+  <li>
+    <p>생성된 [blog_name].github.io 폴더로 이동한다.</p>
+  </li>
+  <li>
+    <p>jekyll serve <br />
+만약, ‘cannot load such file’ 에러가 뜨면, <code class="language-plaintext highlighter-rouge">bundle add webrick</code> 명령어를 입력하고 다시 serve하면 된다.</p>
+  </li>
+  <li>
+    <p><u>http://localhost:4000</u> 주소로 들어가면 블로그 웹페이지가 실행되는 것을 볼 수 있다.</p>
+  </li>
+</ol>
+
+<p>이것은 원격에서 구동되는 서버가 아니라 로컬에서 띄어놓은 서버다. <br />
+때문에 변경 사항이 있으면 바로바로 반영된다.</p>
+
+<p>이제 commit은 한 번만 해도 된다..!</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#github-pages" class="page__taxonomy-item p-category" rel="tag">GitHub Pages</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2021-10-02T00:00:00+09:00">2021-10-02</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/github%20pages/ImageLoad/" class="pagination--pager" title="GitBlog에 이미지 간단하게 업로드하는 방법
+">이전</a>
+    
+    
+      <a href="/database/StartSQL/" class="pagination--pager" title="[SQL] 1 데이터베이스와 SQL은 무엇일까?
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/database/View/" rel="permalink">[SQL] 7 뷰 (View)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-10-30T00:00:00+09:00">2021-10-30</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/database/Normalization/" rel="permalink">[SQL] 6 정규화 (Normalization)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-10-26T00:00:00+09:00">2021-10-26</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">정규화는 테이블 간 데이터 조작(삽입, 수정, 삭제) 시 발생할 수 있는 이상 현상을 줄이기 위해 하는 작업이다.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/database/Ready/" rel="permalink">[SQL] 5 데이터베이스 준비하기
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-10-25T00:00:00+09:00">2021-10-25</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">데이터베이스를 설계할 때 필요한 지식에 대한 내용이다.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/database/UNION/" rel="permalink">[SQL] 4-3 UNION
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-10-14T00:00:00+09:00">2021-10-14</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+&lt;/div&gt;
+    &lt;/div&gt;
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/sominshim/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.instagram.com/somm__in/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 somin. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/github%20pages/LocalHosting/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/github%20pages/LocalHosting"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://shimlog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  &lt;/body&gt;
+&lt;/html&gt;
+&lt;!doctype html&gt;
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+
+<!-- begin _includes/seo.html --><title>GitBlog에 이미지 간단하게 업로드하는 방법 | 심로그</title>
+<meta name="description" content="Typora 문서 편집기 이용" />
+
+
+  <meta name="author" content="  " />
+  
+  <meta property="article:author" content="  " />
+  
+
+
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="심로그" />
+<meta property="og:title" content="GitBlog에 이미지 간단하게 업로드하는 방법" />
+<meta property="og:url" content="http://localhost:4000/github%20pages/ImageLoad/" />
+
+
+  <meta property="og:description" content="Typora 문서 편집기 이용" />
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-10-01T00:00:00+09:00" />
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/github%20pages/ImageLoad/" />
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "somin",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+  <meta name="naver-site-verification" content="f02853291b066ae6de1f47cec265692f11f9081b" />
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="심로그 Feed" />
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css" />
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" /></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.ico/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/logo.ico/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/logo.ico/favicon-16x16.png" />
+<link rel="mask-icon" href="/assets/logo.ico/safari-pinned-tab.svg" color="#5bbad5" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="theme-color" content="#ffffff" />
+
+<!-- <link rel="manifest" href="/site.webmanifest"> -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          심로그
+          <span class="site-subtitle">small positive action</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">Category</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tag</a>
+            </li><li class="masthead__menu-item">
+              <a href="/portfolio/">Portfolio</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope="" itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+          <a href="/categories/#github-pages" itemprop="item"><span itemprop="name">Github pages</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">GitBlog에 이미지 간단하게 업로드하는 방법</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope="" itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">  </a>
+    </h3>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="himsomin20@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/sominshim/" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+
+  
+    <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+
+
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <!--전체 글 수-->
+      <li>
+            ✓ <span style="font-family:'Cafe24Oneprettynight';">Total posts:&lt;/style&gt; <span style="font-family:'Coming Soon';">23&lt;/style&gt; <span style="font-family:'Cafe24Oneprettynight';">&lt;/style&gt; 
+      &lt;/li&gt;
+      <li>
+
+        <!--span 태그로 카테고리들을 크게 분류 -->
+        <span class="nav__title"> Front-end </span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                
+                    <!--git-->
+
+                    
+
+                    
+
+                
+                    <!--paper-->
+
+                    
+
+                    
+
+                
+                    <!--book-->
+
+                    
+
+                    
+
+                
+                    <!--Server-->
+
+                    
+
+                    
+
+                
+                    <!--기술동향-->
+
+                    
+
+                    
+
+                
+                    <!--Python-->
+
+                    
+
+                    
+
+                
+                    <!--GitHub Pages-->
+
+                    
+
+                    
+
+                
+                    <!--Database-->
+
+                    
+
+                    
+
+                
+            </ul>
+
+            
+        
+        <!--span 태그로 카테고리들을 크게 분류 -->
+        <span class="nav__title"> Back-end </span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+                        <span class="nav__sub-title">
+                        <a href="/categories/database">
+                            Database (12)
+                        </a>
+                        </span>
+                    
+
+                    
+
+                
+            </ul>
+
+        <!--span 태그로 카테고리들을 크게 분류 -->
+        <span class="nav__title"> Algorithm </span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                
+            </ul>
+
+
+        <!--span 태그로 카테고리들을 크게 분류 -->
+        <span class="nav__title"> Etc </span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                
+
+                    
+
+                    
+
+                    
+                        <span class="nav__sub-title">
+                        <a href="/categories/git">
+                            Git (2)
+                        </a>
+                        </span>
+                    
+
+                
+
+                    
+
+                    
+                        <span class="nav__sub-title">
+                        <a href="/categories/paper">
+                            paper (1)
+                        </a>
+                        </span>
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                    
+
+                
+
+                    
+                        <span class="nav__sub-title">
+                        <a href="/categories/github-pages" style="color: red;">
+                            GitHub Pages (2)
+                        </a>
+                        </span>
+                    
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                    
+
+                
+            </ul>
+
+            
+            
+      </li>
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+  
+
+  &lt;/div&gt;
+
+
+  <article class="page h-entry" itemscope="" itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="GitBlog에 이미지 간단하게 업로드하는 방법" />
+    <meta itemprop="description" content="Typora 문서 편집기 이용" />
+    <meta itemprop="datePublished" content="2021-10-01T00:00:00+09:00" />
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/github%20pages/ImageLoad/" class="u-url" itemprop="url">GitBlog에 이미지 간단하게 업로드하는 방법
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-10-01T00:00:00+09:00">2021-10-01</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <h2 id="typora-문서-편집기-이용"><strong>Typora 문서 편집기 이용</strong></h2>
+
+<ul>
+  <li>
+    <p><strong>markdown 문법이 적용</strong>된 글을 실시간으로 볼 수 있다.</p>
+  </li>
+  <li>
+    <p>이미지를 <strong>drag and drop</strong> 하면 자동으로 images 폴더에 이미지 파일이 복사된다.</p>
+  </li>
+</ul>
+
+<p>먼저, <a href="https://typora.io/">Typora</a> 사이트에서 프로그램을 설치한다.</p>
+
+<center>서식 → 이미지 → 전역 이미지 설정</center>
+
+<center><img src="../../images/2021-10-01-ImageLoad/스크린샷 2021-10-29 오후 2.26.58.png" alt="screen shot image" /></center>
+
+<p>Copy image to custom folder 선택 후,
+경로를 <strong>”../images/${filename}”</strong>로 설정한다.</p>
+
+<p>그리고 원하는 위치에 이미지를 복사 붙여넣기 또는 drag and drop 한다.</p>
+
+<p><img src="../../images/2021-10-01-ImageLoad/스크린샷 2021-10-29 오후 2.39.10.png" alt="스크린샷 2021-10-29 오후 2.39.10" /></p>
+
+<p>위와 같이 images 폴더에 해당 포스트 이름으로 이미지 폴더가 생성되고, 그 안에 이미지가 자동으로 업로드 되는 것을 확인할 수 있다.</p>
+
+<p>이제부터 이미지를 삽입할 때 일일이 저장하고 경로 설정하는 번거로움은 덜었다.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#github-pages" class="page__taxonomy-item p-category" rel="tag">GitHub Pages</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2021-10-01T00:00:00+09:00">2021-10-01</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/python/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D-Anomalies-%ED%83%90%EC%A7%80-%EB%B0%A9%EB%B2%95-5%EA%B0%80%EC%A7%80/" class="pagination--pager" title="[데이터분석] Outliers/Anomalies 탐지 방법 5가지
+">이전</a>
+    
+    
+      <a href="/github%20pages/LocalHosting/" class="pagination--pager" title="로컬에서 GitHub Pages 호스팅하기
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/database/View/" rel="permalink">[SQL] 7 뷰 (View)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-10-30T00:00:00+09:00">2021-10-30</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/database/Normalization/" rel="permalink">[SQL] 6 정규화 (Normalization)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-10-26T00:00:00+09:00">2021-10-26</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">정규화는 테이블 간 데이터 조작(삽입, 수정, 삭제) 시 발생할 수 있는 이상 현상을 줄이기 위해 하는 작업이다.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/database/Ready/" rel="permalink">[SQL] 5 데이터베이스 준비하기
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-10-25T00:00:00+09:00">2021-10-25</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">데이터베이스를 설계할 때 필요한 지식에 대한 내용이다.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/database/UNION/" rel="permalink">[SQL] 4-3 UNION
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-10-14T00:00:00+09:00">2021-10-14</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+&lt;/div&gt;
+    &lt;/div&gt;
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/sominshim/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.instagram.com/somm__in/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 somin. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/github%20pages/ImageLoad/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/github%20pages/ImageLoad"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://shimlog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  &lt;/body&gt;
+&lt;/html&gt;
+ --&gt;
+
+</span></span></span></li></ul></nav></div></div></div></body></html></span></span></span></li></ul></nav></div></div></div></body></html>
+:ET

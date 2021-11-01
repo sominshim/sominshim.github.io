@@ -1,0 +1,27 @@
+I"�
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/paper/paper-2020-Predicting-Customer-Class-using-Customer-Lifetime-Value-with-Random-Forest-Algorithm/">[paper][2020] Predicting Customer Class using Customer Lifetime Value with Random Forest Algorithm</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.07.01
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords">
+                <!--<a href="/categories/#paper" class="page__taxonomy-item-category" rel="tag">Paper</a>-->
+                
+                    
+                    
+                    <a href="/tags/#paper" class="page__taxonomy-item-tag" rel="tag">Paper</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+:ET

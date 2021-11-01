@@ -1,0 +1,350 @@
+I"1
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/database/View/">[SQL] 7 뷰 (View)</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.10.30
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords">
+                <!--<a href="/categories/#database" class="page__taxonomy-item-category" rel="tag">Database</a>-->
+                
+                    
+                    
+                    <a href="/tags/#database" class="page__taxonomy-item-tag" rel="tag">Database</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#sql" class="page__taxonomy-item-tag" rel="tag">SQL</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/database/Normalization/">[SQL] 6 정규화 (Normalization)</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.10.26
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords">
+                <!--<a href="/categories/#database" class="page__taxonomy-item-category" rel="tag">Database</a>-->
+                
+                    
+                    
+                    <a href="/tags/#database" class="page__taxonomy-item-tag" rel="tag">Database</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#sql" class="page__taxonomy-item-tag" rel="tag">SQL</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/database/Ready/">[SQL] 5 데이터베이스 준비하기</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.10.25
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords">
+                <!--<a href="/categories/#database" class="page__taxonomy-item-category" rel="tag">Database</a>-->
+                
+                    
+                    
+                    <a href="/tags/#database" class="page__taxonomy-item-tag" rel="tag">Database</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#sql" class="page__taxonomy-item-tag" rel="tag">SQL</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/database/UNION/">[SQL] 4-3 UNION</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.10.14
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords">
+                <!--<a href="/categories/#database" class="page__taxonomy-item-category" rel="tag">Database</a>-->
+                
+                    
+                    
+                    <a href="/tags/#database" class="page__taxonomy-item-tag" rel="tag">Database</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#sql" class="page__taxonomy-item-tag" rel="tag">SQL</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/database/Subquery/">[SQL] 4-2 서브 쿼리 (subquery)</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.10.13
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords">
+                <!--<a href="/categories/#database" class="page__taxonomy-item-category" rel="tag">Database</a>-->
+                
+                    
+                    
+                    <a href="/tags/#database" class="page__taxonomy-item-tag" rel="tag">Database</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#sql" class="page__taxonomy-item-tag" rel="tag">SQL</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/database/JOIN/">[SQL] 4-1 JOIN (INNER, LEFT, RIGHT)</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.10.10
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords">
+                <!--<a href="/categories/#database" class="page__taxonomy-item-category" rel="tag">Database</a>-->
+                
+                    
+                    
+                    <a href="/tags/#database" class="page__taxonomy-item-tag" rel="tag">Database</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#sql" class="page__taxonomy-item-tag" rel="tag">SQL</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/database/MultiTable/">[SQL] 4 다중 테이블 연산</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.10.09
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords">
+                <!--<a href="/categories/#database" class="page__taxonomy-item-category" rel="tag">Database</a>-->
+                
+                    
+                    
+                    <a href="/tags/#database" class="page__taxonomy-item-tag" rel="tag">Database</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#sql" class="page__taxonomy-item-tag" rel="tag">SQL</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/database/GroupFunc/">[SQL] 3-1 그룹(aggregate) 함수</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.10.06
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords">
+                <!--<a href="/categories/#database" class="page__taxonomy-item-category" rel="tag">Database</a>-->
+                
+                    
+                    
+                    <a href="/tags/#database" class="page__taxonomy-item-tag" rel="tag">Database</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#sql" class="page__taxonomy-item-tag" rel="tag">SQL</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/database/SQLFunc/">[SQL] 3 내장 함수</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.10.05
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords">
+                <!--<a href="/categories/#database" class="page__taxonomy-item-category" rel="tag">Database</a>-->
+                
+                    
+                    
+                    <a href="/tags/#database" class="page__taxonomy-item-tag" rel="tag">Database</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#sql" class="page__taxonomy-item-tag" rel="tag">SQL</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/database/DDL/">[SQL] 기본 문법(DDL)</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.10.05
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords">
+                <!--<a href="/categories/#database" class="page__taxonomy-item-category" rel="tag">Database</a>-->
+                
+                    
+                    
+                    <a href="/tags/#database" class="page__taxonomy-item-tag" rel="tag">Database</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#sql" class="page__taxonomy-item-tag" rel="tag">SQL</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/database/DML/">[SQL] 2 기본 문법(DML)</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.10.04
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords">
+                <!--<a href="/categories/#database" class="page__taxonomy-item-category" rel="tag">Database</a>-->
+                
+                    
+                    
+                    <a href="/tags/#database" class="page__taxonomy-item-tag" rel="tag">Database</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#sql" class="page__taxonomy-item-tag" rel="tag">SQL</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/database/StartSQL/">[SQL] 1 데이터베이스와 SQL은 무엇일까?</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.10.03
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords">
+                <!--<a href="/categories/#database" class="page__taxonomy-item-category" rel="tag">Database</a>-->
+                
+                    
+                    
+                    <a href="/tags/#database" class="page__taxonomy-item-tag" rel="tag">Database</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#sql" class="page__taxonomy-item-tag" rel="tag">SQL</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+:ET

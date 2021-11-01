@@ -1,0 +1,50 @@
+I"�
+<!--  -->
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/github%20pages/LocalHosting/">로컬에서 GitHub Pages 호스팅하기</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.10.02
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#github-pages" class="page__taxonomy-item-category" rel="tag">GitHub Pages</a>
+                    
+                    
+                    <a href="/tags/#blog" class="page__taxonomy-item-tag" rel="tag">Blog</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/github%20pages/ImageLoad/">GitBlog에 이미지 간단하게 업로드하는 방법</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.10.01
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#github-pages" class="page__taxonomy-item-category" rel="tag">GitHub Pages</a>
+                    
+                    
+                    <a href="/tags/#blog" class="page__taxonomy-item-tag" rel="tag">Blog</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+:ET

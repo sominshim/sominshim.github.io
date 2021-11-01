@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "[paper][2020] Predicting Customer Class using Customer Lifetime Value with Random Forest Algorithm"
-categories: [paper]
-tags: [paper]
+categories: [Paper]
+tags: [Paper]
 
 toc: true
 toc_sticky: true

@@ -1,7 +1,7 @@
 ---
 layout: single
-title:  "[Python] non-default argument follows default argument"
-categories: [Python]
+title:  "[Error] non-default argument follows default argument"
+categories: [Error]
 tags: [Python, error]
 
 toc: true
