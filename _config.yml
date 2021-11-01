@@ -103,21 +103,21 @@ analytics:
 
 # Site Author
 author:
-  name             : #"심소민"
+  name             : "  "
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   # bio              : "일일 개발 기록 블로그"
   # location         : "South Korea"
-  email            : # "shimsomin20@gmail.com"
+  # email            :  "shimsomin20@gmail.com"
   links:
-    # - label: "Email"
-    #   icon: "fas fa-fw fa-envelope-square"
-    #   url: "himsomin20@gmail.com"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "himsomin20@gmail.com"
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
     #   url: "https://sominshim.github.io"
-    # - label: "GitHub"
-    #   icon: "fab fa-fw fa-github"
-    #   url: "https://github.com/sominshim/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/sominshim/"
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://www.instagram.com/somm__in/"
@@ -275,5 +275,6 @@ defaults:
       # share: true
       related: true
       show_date: true
+      sidebar_main: true
 
 date_format: "%Y-%m-%d"
