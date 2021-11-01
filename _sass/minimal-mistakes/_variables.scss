@@ -1,6 +1,7 @@
 /* ==========================================================================
    Variables
    ========================================================================== */
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 
 /*
    Typography
@@ -13,8 +14,8 @@ $paragraph-indent: false !default; // true, false (default)
 $indent-var: 0.8em !default; // default 1.5
 
 /* system typefaces */
-$serif: Georgia, Times, serif !default;
-$sans-serif: -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Roboto", "Segoe UI",
+$serif: 'NanumSquare', Georgia, Times, serif !default;
+$sans-serif: 'NanumSquare', -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 

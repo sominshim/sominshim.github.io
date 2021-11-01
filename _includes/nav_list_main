@@ -8,7 +8,7 @@
   <ul class="nav__items" id="category_tag_menu">
       <!--전체 글 수-->
       <li>
-            ✓ <span style="font-family:'Cafe24Oneprettynight';">Total posts:</style> <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';"></style> 
+            ✓ <span style="font-size:0.7em">Total posts:</span> <span style="font-size: 0.8em;">{{sum}}</span>
       </li>
       <li>
 
