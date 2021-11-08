@@ -1,0 +1,55 @@
+I"�<h2 id="01-웹서버의동작과정이해하기">01. 웹서버의동작과정이해하기</h2>
+
+<p>클라이언트에서는 정해진 규칙에 따라 데이터를 요청하고,</p>
+
+<p>서버에서는 정해진 형태의 데이터로 응답한다.</p>
+
+<p>url 주소로 네이버에 들어간다 : 클라이언트가 url 주소로 데이터를 요청하는 것이다.</p>
+
+<p>정해진 방식으로 주소를 요청하는 것을 API라고 한다.</p>
+
+<h2 id="02-flask-framework란">02. Flask Framework란?</h2>
+
+<p>파이썬 기반의 Flask 프레임워크는 서버를 쉽고 빠르게 만들 수 있다.</p>
+
+<p>Flask를 이용하면 원하는 기능을 유연하게 확장하기 편리하다.</p>
+
+<h2 id="03-flask로-웹-서버-만들기">03. Flask로 웹 서버 만들기</h2>
+
+<p>이 파일이 직접 실행됐는지 외부에서 실행됐는지?</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">@</code></strong>는 장식자(decorator)라고 부르며, 함수 작성의 편의를 위한 파이썬의 문법이다.</p>
+
+<h2 id="04-url을-연결하고-데이터를-화면에-나타내기">04. URL을 연결하고 데이터를 화면에 나타내기</h2>
+
+<ul>
+  <li>jsonify(): 딕셔너리 형태의 데이터를 전달함으로써 JSON 형태의 데이터를 화면에 전달</li>
+  <li>render_templates(): templates 폴더 안에 있는 html 파일의 이름을 전달함으로써 HTML 형태의 데이터를 화면에 전달</li>
+  <li>함수 이름은 중복 X</li>
+  <li><code class="language-plaintext highlighter-rouge">from flask import *</code>: flask 패키지에 있는 라이브러리 모두를 가져와라</li>
+</ul>
+
+<h2 id="05-rest-api란">05. REST API란?</h2>
+
+<ul>
+  <li>
+    <p>CRUD: Create, Read, Update, Delete = 읽고 쓰고 수정하고 지우고</p>
+  </li>
+  <li>
+    <p>REST API: HTTP URL을 통해 자원을 표현하고 , HTTP method를 통해 데이터를 다루는 방법</p>
+  </li>
+</ul>
+
+<p>HTTP METHOD를 이용해 CRUD Operation 수행</p>
+
+<h2 id="06-http-method-사용하기">06. HTTP Method 사용하기</h2>
+
+<ul>
+  <li>
+    <p>GET: URL 뒤에 물음표를 붙여서 데이터를 서버에 전송</p>
+  </li>
+  <li>
+    <p>POST: 일정한 양식에 데이터를 넣어서 전송</p>
+  </li>
+</ul>
+:ET
