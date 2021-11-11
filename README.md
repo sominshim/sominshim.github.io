@@ -8,3 +8,7 @@
 ## Back-end
 - Database
 - Flask
+
+## Project
+- 데이터 분석
+- 도서 
