@@ -1,5 +1,4 @@
-# sominshim.github.io
-
+# [Click to SHIM's Log page](https://sominshim.github.io/)
 ## Front-end
 - HTML
 - CSS
