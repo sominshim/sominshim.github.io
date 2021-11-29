@@ -1,4 +1,4 @@
-# [Go to SHIM's Blog](https://sominshim.github.io/)
+# [SHIM's Blog](https://sominshim.github.io/)
 ## Front-end
 - HTML
 - CSS
