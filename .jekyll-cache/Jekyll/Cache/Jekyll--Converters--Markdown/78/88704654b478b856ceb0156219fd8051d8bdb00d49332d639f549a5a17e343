@@ -1,0 +1,269 @@
+I"F�<h1 id="04-matplotlib-데이터-시각화">04 Matplotlib 데이터 시각화</h1>
+
+<p>Status: In progress</p>
+
+<h2 id="matplotlib">Matplotlib</h2>
+
+<p>: 파이썬에서 데이터를 그래프나 차트로 시각화할 수 있는 라이브러리다.</p>
+
+<h2 id="그래프-그리기">그래프 그리기</h2>
+
+<ul>
+  <li>
+    <p>state-machine interface</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+  
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+  
+<span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">"First Plot"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"x"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"y"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><img src="../../images/2021-12-01-data/untitled.png" alt="Untitled" /></p>
+
+<ul>
+  <li>
+    <p>object-oriented interface</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+  
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+  
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span> <span class="c1"># fig, ax 객체 생성
+</span><span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">"First Plot"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">"x"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">"y"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><img src="../../images/2021-12-01-data/untitled.png" alt="Untitled" /></p>
+
+<p>object-oriented interface 방식이 직관적이기 때문에 선호한다.</p>
+
+<h3 id="matplotlib-구조">Matplotlib 구조</h3>
+
+<p><img src="../../images/2021-12-01-data/Untitled 1.png" alt="Untitled" /></p>
+
+<h3 id="그래프-저장">그래프 저장</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span><span class="p">.</span><span class="n">set_dip</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+<span class="c1"># set_dip은 해상도를 나타내는 것으로 보통 300으로 하면 된다.
+</span><span class="n">fig</span><span class="p">.</span><span class="n">savefig</span><span class="p">(</span><span class="s">"그림파일.png"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="하나의-figure에-여러-그래프axes-그리기">하나의 figure에 여러 그래프(axes) 그리기</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># (행, 열)
+# fig (도화지) 크기 설정
+# fig, axes = plt.subplots(1, 2, figsize=(8, 4))
+</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><img src="../../images/2021-12-01-data/Untitled 2.png" alt="Untitled" /></p>
+
+<h2 id="line-plot">Line plot</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span>
+	<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>
+	<span class="n">linestyle</span><span class="o">=</span><span class="s">":"</span><span class="p">,</span>
+	<span class="n">marker</span><span class="o">=</span><span class="s">"*"</span><span class="p">,</span>
+	<span class="n">color</span><span class="o">=</span><span class="s">"#524FA1"</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="../../images/2021-12-01-data/Untitled 3.png" alt="Untitled" /></p>
+
+<h3 id="line-style">Line style</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">"-"</span><span class="p">)</span>
+<span class="c1"># solid
+</span><span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">"--"</span><span class="p">)</span>
+<span class="c1"># dashed
+</span><span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">"-."</span><span class="p">)</span>
+<span class="c1"># dashdot
+</span><span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="mi">6</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">":"</span><span class="p">)</span>
+<span class="c1"># dotted
+</span></code></pre></div></div>
+
+<p><img src="../../images/2021-12-01-data/Untitled 4.png" alt="Untitled" /></p>
+
+<h3 id="color">Color</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">"r"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">"green"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'0.8'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="mi">6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">"#524FA1"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="../../images/2021-12-01-data/Untitled 5.png" alt="Untitled" /></p>
+
+<h3 id="marker">Marker</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">"."</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">"o"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'v'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="mi">6</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">"s"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="mi">8</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">"*"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="../../images/2021-12-01-data/Untitled 6.png" alt="Untitled" /></p>
+
+<h3 id="축-경계-조정하기">축 경계 조정하기</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="../../images/2021-12-01-data/Untitled 7.png" alt="Untitled" /></p>
+
+<h3 id="범례">범례</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'y=x'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'y=x^2'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">"x"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">"y"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">legend</span><span class="p">(</span>
+	<span class="n">loc</span><span class="o">=</span><span class="s">'upper right'</span><span class="p">,</span> <span class="c1"># lower left /center
+</span>	<span class="n">shadow</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+	<span class="n">fancybox</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="c1"># 모서리
+</span>	<span class="n">borderpad</span><span class="o">=</span><span class="mi">2</span> <span class="c1"># 박스 테두리
+</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="../../images/2021-12-01-data/Untitled 8.png" alt="Untitled" /></p>
+
+<h2 id="scatter">Scatter</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span>
+	<span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="s">"o"</span><span class="p">,</span>
+	<span class="n">markersize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+	<span class="n">markerfacecolor</span><span class="o">=</span><span class="s">'white'</span><span class="p">,</span> 
+	<span class="n">markeredgecolor</span><span class="o">=</span><span class="s">"blue"</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="../../images/2021-12-01-data/Untitled 9.png" alt="Untitled" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="mi">500</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span>
+	<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="n">sizes</span><span class="p">,</span>
+	<span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="../../images/2021-12-01-data/Untitled 10.png" alt="Untitled" /></p>
+
+<h3 id="tip">tip</h3>
+
+<p>matplotlib 의 pyplot으로 그래프를 그릴 때, 기본 폰트는 한글을 지원하지 않습니다.</p>
+
+<p>한글 지원 폰트로 직접 바꾸어주면 한글을 사용하실 수 있습니다.</p>
+
+<p>아래는 한글을 지원하는 <strong><code class="language-plaintext highlighter-rouge">나눔바른고딕</code></strong> 폰트로 바꾼 코드입니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.font_manager</span> <span class="k">as</span> <span class="n">fm</span>
+<span class="n">fname</span><span class="o">=</span><span class="s">'./NanumBarunGothic.ttf'</span>
+<span class="n">font</span> <span class="o">=</span> <span class="n">fm</span><span class="p">.</span><span class="n">FontProperties</span><span class="p">(</span><span class="n">fname</span> <span class="o">=</span> <span class="n">fname</span><span class="p">).</span><span class="n">get_name</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">"font.family"</span><span class="p">]</span> <span class="o">=</span> <span class="n">font</span>
+</code></pre></div></div>
+
+<h2 id="bar--histogram">Bar &amp; Histogram</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># bar
+</span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="../../images/2021-12-01-data/Untitled 11.png" alt="Untitled" /></p>
+
+<h3 id="누적-바-그래프">누적 바 그래프</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">x_ax</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x_ax</span><span class="p">:</span>
+	<span class="n">ax</span><span class="p">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x_ax</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+				 <span class="n">bottom</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">[:</span><span class="n">i</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">x_ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p><img src="../../images/2021-12-01-data/Untitled 12.png" alt="Untitled" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="../../images/2021-12-01-data/Untitled 13.png" alt="Untitled" /></p>
+
+<h2 id="matplotlib-with-pandas">Matplotlib with Pandas</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"./president_heights.csv"</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">"order"</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s">"height(cm)"</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s">"height"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">"order"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">"height(cm)"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"./data/pokemon.csv"</span><span class="p">)</span>
+
+<span class="n">fire</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'Type 1'</span><span class="p">]</span><span class="o">==</span><span class="s">'Fire'</span><span class="p">)</span> <span class="o">|</span> <span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s">'Type 2'</span><span class="p">])</span><span class="o">==</span><span class="s">"Fire"</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">water</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'Type 1'</span><span class="p">]</span><span class="o">==</span><span class="s">'Water'</span><span class="p">)</span> <span class="o">|</span> <span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s">'Type 2'</span><span class="p">])</span><span class="o">==</span><span class="s">"Water"</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">fire</span><span class="p">[</span><span class="s">'Attack'</span><span class="p">],</span> <span class="n">fire</span><span class="p">[</span><span class="s">'Defense'</span><span class="p">],</span>
+    <span class="n">color</span><span class="o">=</span><span class="s">'R'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Fire'</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">"*"</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">water</span><span class="p">[</span><span class="s">'Attack'</span><span class="p">],</span> <span class="n">water</span><span class="p">[</span><span class="s">'Defense'</span><span class="p">],</span>
+    <span class="n">color</span><span class="o">=</span><span class="s">'B'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Water"</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">"Attack"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">"Defense"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">"upper right"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="../../images/2021-12-01-data/Untitled 14.png" alt="Untitled" /></p>
+
+:ET

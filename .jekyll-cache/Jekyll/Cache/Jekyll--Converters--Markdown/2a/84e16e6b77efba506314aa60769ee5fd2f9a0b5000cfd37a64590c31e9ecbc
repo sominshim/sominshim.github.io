@@ -1,0 +1,76 @@
+I"P<p>“미러링한다”는 말은 “복사한다”는 의미이다.</p>
+
+<p>예를 들어 깃랩에 있는 레파지토리를 깃허브로 미러링하면 깃랩의 브랜치, 태그 그리고 커밋까지 깃허브 레파지토리에 그대로 복사된다.</p>
+
+<p>잔디도 심어진다 !!</p>
+
+<p>세 가지 미러링 방법이 있다.</p>
+
+<ol>
+  <li><strong>Push</strong>: GitLab → 다른 위치</li>
+  <li><strong>Pull</strong>: 다른 위치 → GitLab</li>
+  <li><strong>Bidirectional</strong>: GitLab ↔︎ 다른 위치, 충돌이 발생할 수 있음.</li>
+</ol>
+
+<h3 id="mirror-a-repository-when">Mirror a repository when:</h3>
+
+<ul>
+  <li>GitLab 프로젝트 사본을 다른 위치에 남겨두고 싶을 때, GitLab 레파지토리를 <strong>Push mirror</strong>한다.</li>
+  <li>GitLab 프로젝트는 비공개이지만 일부 구성 요소는 공개하여 공유할 수 있다. 기본 레파지토리를 <strong>Push mirror</strong>하고 공개하려는 부분만 Push mirror한다. 이는 오픈 소스 커뮤니티에 기여하고, 프로젝트의 민감한 부분을 보호할 수 있다.</li>
+  <li>프로젝트의 표준 버전이 다른 곳에 있을 때 <strong>Pull mirror</strong> 한다. 모든 외부 소스와 레파지토리를 가져와 GitLab에서 사용할 수 있게 된다.</li>
+</ul>
+
+<p>오늘은 <strong>Push mirror</strong>하는 방법에 대해 알아보자.</p>
+
+<blockquote>
+  <p>미러링 조건</p>
+</blockquote>
+
+<ul>
+  <li>프로젝트 관리자여야 한다.</li>
+  <li>mirror가 ssh://로 연결되는 경우, 서버에서 호스트 키를 감지할 수 있거나 로컬 복사본 키가 있어야 한다.</li>
+</ul>
+
+<h2 id="on-github">on GitHub</h2>
+
+<h3 id="1-create-a-repository-on-github">1. Create a repository on GitHub</h3>
+
+<p>해당 repository에 미러링을 할 것이다.</p>
+
+<h3 id="2-access-token">2. Access token</h3>
+
+<p><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub Docs</a> 를 참고하여 엑세스 토큰을 생성하고 복사해둔다.</p>
+
+<h2 id="go-to-gitlab">go to GitLab</h2>
+
+<h3 id="1-미러링할-프로젝트의-settings--repository">1. <strong>미러링할 프로젝트</strong>의 Settings &gt; Repository</h3>
+
+<p><img src="../images/2022-03-22-How to mirror gitlab to github/스크린샷 2022-03-22 오후 3.00.04-7936930.png" alt="스크린샷 2022-03-22 오후 3.00.04" style="zoom:50%;" /></p>
+
+<h3 id="2-mirroring-repositories-의-expand-버튼을-클릭한다">2. Mirroring repositories 의 <code class="language-plaintext highlighter-rouge">Expand</code> 버튼을 클릭한다.</h3>
+
+<p><img src="../images/2022-03-22-How to mirror gitlab to github/스크린샷 2022-03-22 오후 3.01.13.png" alt="스크린샷 2022-03-22 오후 3.01.13" style="zoom:33%;" /></p>
+
+<h3 id="3-git-repository-url-password-입력하면-끝">3. Git repository URL, Password 입력하면 끝!</h3>
+
+<p><img src="../images/2022-03-22-How to mirror gitlab to github/kdt-gitlab.elice.io_ai_track_class_03_data_project_003-part3-ottservice_team7_project-template_-_settings_repository (1)-7936941.png" alt="kdt-gitlab.elice.io_ai_track_class_03_data_project_003-part3-ottservice_team7_project-template_-_settings_repository (1)" style="zoom:33%;" /></p>
+
+<ul>
+  <li>
+    <p>Git repository URL 입력</p>
+
+    <p><code class="language-plaintext highlighter-rouge">https://gitlab.company.com//&lt;username&gt;//&lt;project-name&gt;.git</code></p>
+
+    <p>→ <code class="language-plaintext highlighter-rouge">https://&lt;username&gt;@gitlab.company.com//&lt;username&gt;//&lt;project-name&gt;.git</code></p>
+
+    <p><code class="language-plaintext highlighter-rouge">https://</code> 뒤에 <code class="language-plaintext highlighter-rouge">&lt;username&gt;@</code> 추가해야 한다.</p>
+  </li>
+  <li>
+    <p>Password 칸에 미리 복사해둔 엑세스 토큰 입력</p>
+  </li>
+</ul>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://docs.gitlab.com/ee/user/project/repository/mirror/">GitLab Docs</a></p>
+:ET

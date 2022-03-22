@@ -1,0 +1,53 @@
+I"s
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/git/How-to-mirror-gitlab-to-github/">How to mirror Gitlab to GitHub</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.03.22
+            <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords">
+                <!--<a href="/categories/#git" class="page__taxonomy-item-category" rel="tag">Git</a>-->
+                
+                    
+                    
+                    <a href="/tags/#git" class="page__taxonomy-item-tag" rel="tag">Git</a>
+                
+            </span>
+        </span>
+        </small>
+    
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/git/git-Git-ignore-%EC%82%AC%EC%9A%A9%EB%B2%95/">[git] Git ignore 사용법</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.07.14
+            
+        </small>
+    
+      </article>
+</div>
+
+<div class="list__item">
+    <article class="archive-item" style="padding:0em 0em 0.5em 0em;">        
+        <span>
+            <a href="/git/git-git-%EC%82%AC%EC%9A%A9%EB%B2%95/">[git] git 사용법</a>
+        </span>
+        <small> 
+            <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.07.01
+            
+        </small>
+    
+      </article>
+</div>
+
+:ET

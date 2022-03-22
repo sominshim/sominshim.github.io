@@ -1,0 +1,86 @@
+I"�<h2 id="개발자-도구로-화면-캡처하기">개발자 도구로 화면 캡처하기</h2>
+
+<ol>
+  <li>Chrome 개발자 도구 열기</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">F12</code> 또는 <code class="language-plaintext highlighter-rouge">Option + Cmd + I</code></p>
+
+<ol>
+  <li>Command 창을 열자</li>
+</ol>
+
+<ul>
+  <li>
+    <p>단축키 이용</p>
+
+    <ul>
+      <li>
+        <p>Windows : <code class="language-plaintext highlighter-rouge">Ctrl + Shift + P</code></p>
+      </li>
+      <li>
+        <p>macOS : <code class="language-plaintext highlighter-rouge">Cmd + Shift + P</code></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>마우스 이용</p>
+
+    <ul>
+      <li><img src="../images/2022-02-02/스크린샷 2022-03-22 오후 1.04.19.png" style="zoom:50%;" /></li>
+    </ul>
+  </li>
+</ul>
+
+<ol>
+  <li>여러가지 명령어가 있다, 원하는 기능을 검색해서 사용하면 된다.</li>
+</ol>
+
+<p><img src="../images/2022-02-02/스크린샷 2022-03-22 오후 1.18.08.png" style="zoom:50%;" /></p>
+
+<h3 id="screenshot">Screenshot</h3>
+
+<p><img src="../images/2022-02-02/스크린샷 2022-03-22 오후 1.29.18.png" style="zoom:50%;" /></p>
+
+<p>전체 화면은 아래와 같다.</p>
+
+<p><img src="../images/2022-02-02/스크린샷 2022-03-22 오후 2.22.00.png" alt="스크린샷 2022-03-22 오후 2.22.00" style="zoom:30%;" /></p>
+
+<p>여기서 4가지 캡쳐 방식이 있는데 각각 어떻게 캡쳐되는지 알아보자.</p>
+
+<ul>
+  <li>
+    <p><strong>Capture area screenshot</strong>: 캡처하고 싶은 영역을 지정하여 캡쳐</p>
+
+    <p><img src="../images/2022-02-02/chrome___newtab_ (1).png" style="zoom:50%" /></p>
+  </li>
+  <li>
+    <p><strong>Capture full size screenshot</strong>: html 영역 전체 화면 캡쳐</p>
+
+    <p><img src="../images/2022-02-02/chrome___newtab_-7925681.png" alt="chrome___newtab_" /></p>
+  </li>
+  <li>
+    <p><strong>Capture node screenshot</strong>: html 태그 영역 캡쳐</p>
+
+    <p>아래는 아이콘 클래스를 캡처한 것이다.</p>
+
+    <p><img src="../../../../Downloads/chrome___newtab_ (3).png" alt="chrome___newtab_ (3)" style="zoom:50%;" /></p>
+  </li>
+  <li>
+    <p><strong>Capture screenshot</strong>: 보이는 html 영역 화면 캡쳐</p>
+
+    <p>Capture full size screenshot 과 유사하지만 보이는 영역만 캡쳐하는 것을 알 수 있다.</p>
+
+    <p><img src="../images/2022-02-02/chrome___newtab_ (4).png" alt="chrome___newtab_ (4)" style="zoom:30%;" /></p>
+  </li>
+</ul>
+
+<blockquote>
+  <p><strong>Capture full size screenshot</strong> vs. <strong>Capture screenshot</strong></p>
+</blockquote>
+
+<p>네이버 창을 캡쳐해보면 확연한 차이가 보인다.</p>
+
+<p><img src="../../../../Downloads/www.naver.com_.png" alt="www.naver.com_" style="zoom:15%;" /><img src="../../../../Downloads/www.naver.com_ (1).png" alt="www.naver.com_ (1)" style="zoom:15%;" /></p>
+
+:ET
